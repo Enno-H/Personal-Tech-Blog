@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.fabric.jdbc.FabricMySQLDriver
+    url: jdbc:mysql://localhost:3306/blog?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+logging:
+  level:
+    root: info
+    com.enno.blog: debug
+  file: log/blog.log
