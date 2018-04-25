@@ -15,3 +15,14 @@
 2018-04-25 16:53:03.945  WARN 69333 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=22s752ms), soft-evicting connections from pool.
 2018-04-25 17:16:18.737  WARN 69333 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m37s98ms).
 2018-04-25 17:37:18.300  WARN 69333 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m59s506ms).
+2018-04-25 18:24:05.809  WARN 69333 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=23m4s78ms).
+2018-04-25 22:09:29.696  WARN 69333 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h44m53s834ms).
+2018-04-25 22:09:52.287  WARN 69333 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=22s611ms), soft-evicting connections from pool.
+2018-04-25 22:19:39.477  WARN 69333 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m17s113ms).
+2018-04-25 22:25:00.954  WARN 69333 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=21s441ms), soft-evicting connections from pool.
+2018-04-25 22:50:20.815  WARN 69333 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m41s798ms).
+2018-04-25 22:50:43.265  WARN 69333 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=22s450ms), soft-evicting connections from pool.
+2018-04-25 23:00:04.569  INFO 74953 --- [restartedMain] com.enno.blog.BlogApplication            : Starting BlogApplication on Ennos-MacBook-Pro.local with PID 74953 (/Users/huangxiaolong/IdeaProjects/blog/target/classes started by huangxiaolong in /Users/huangxiaolong/IdeaProjects/blog)
+2018-04-25 23:00:04.570  INFO 74953 --- [restartedMain] com.enno.blog.BlogApplication            : The following profiles are active: pro
+2018-04-25 23:00:07.833  WARN 74953 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-04-25 23:00:08.311  INFO 74953 --- [restartedMain] com.enno.blog.BlogApplication            : Started BlogApplication in 4.275 seconds (JVM running for 5.316)

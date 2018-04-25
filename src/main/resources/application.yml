@@ -2,4 +2,4 @@ spring:
   thymeleaf:
     mode: HTML
   profiles:
-    active: pro
+    active: dev
