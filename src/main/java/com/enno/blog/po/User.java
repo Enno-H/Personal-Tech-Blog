@@ -12,6 +12,7 @@ public class User {
     @Id
     @GeneratedValue
     private Long Id;
+    private String avatar;
     private String nickname;
     private String username;
     private String password;
@@ -90,6 +91,14 @@ public class User {
 
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
+    }
+
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
     }
 
     public List<Blog> getBlogs() {

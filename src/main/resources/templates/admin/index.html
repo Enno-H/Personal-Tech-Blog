@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-    <head th:replace="admin/_fragments :: head(~(::title))">
+    <head th:replace="admin/_fragments :: head(~{::title})">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>博客管理</title>
@@ -24,7 +24,7 @@
                             </div>
                             <i class="dropdown icon"></i>
                             <div class="menu">
-                                <a href="#" class="item">注销</a>
+                                <a href="#" th:href="@{/admin/logout}" class="item">注销</a>
                             </div>
                         </div>
                     </div>
