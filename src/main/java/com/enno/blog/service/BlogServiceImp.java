@@ -4,6 +4,7 @@ import com.enno.blog.NotFoundException;
 import com.enno.blog.dao.BlogRepository;
 import com.enno.blog.po.Blog;
 import com.enno.blog.po.Type;
+import com.enno.blog.vo.BlogQuery;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -30,7 +31,7 @@ public class BlogServiceImp implements BlogService {
     }
 
     @Override
-    public Page<Blog> listBlog(Pageable pageable, Blog blog) {
+    public Page<Blog> listBlog(Pageable pageable, BlogQuery blog) {
         return blogRepository.findAll(new Specification<Blog>() {
             @Override
             public Predicate toPredicate(Root<Blog> root, CriteriaQuery<?> criteriaQuery, CriteriaBuilder criteriaBuilder) {
@@ -38,11 +39,11 @@ public class BlogServiceImp implements BlogService {
                 if(!"".equals(blog.getTitle()) && blog.getTitle() != null){
                     predicates.add(criteriaBuilder.like(root.get("title"), "%"+blog.getTitle()+"%"));
                 }
-                if(blog.getType().getId() != null){
-                    predicates.add(criteriaBuilder.equal(root.<Type>get("type").get("id"), blog.getType().getId()));
+                if(blog.getTypeId() != null){
+                    predicates.add(criteriaBuilder.equal(root.<Type>get("type").get("id"), blog.getTypeId()));
                 }
-                if(blog.isRecommened()){
-                    predicates.add(criteriaBuilder.equal(root.<Boolean>get("recommend"), blog.isRecommened()));
+                if (blog.isRecommend()) {
+                    predicates.add(criteriaBuilder.equal(root.<Boolean>get("recommend"), blog.isRecommend()));
                 }
                 criteriaQuery.where(predicates.toArray(new Predicate[predicates.size()]));
                 return null;
