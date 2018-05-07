@@ -14,15 +14,16 @@ public class Blog {
     private Long id;
 
     private String title;
+
     private String content;
     private String firstPicture;
     private String flag;
     private Integer views;
     private boolean appreciation;
     private boolean shareStatement;
+    private boolean commentable;
     private boolean published;
     private boolean recommend;
-    private boolean commentable;
     @Temporal(TemporalType.TIMESTAMP)
     private Date createTime;
     @Temporal(TemporalType.TIMESTAMP)
@@ -34,6 +35,7 @@ public class Blog {
     @ManyToMany(cascade = {CascadeType.PERSIST})
     private List<Tag> tags = new ArrayList<>();
 
+
     @ManyToOne
     private User user;
 
@@ -43,23 +45,8 @@ public class Blog {
     @Transient
     private String tagIds;
 
-    public String getTagIds() {
-        return tagIds;
-    }
-
-    public void setTagIds(String tagIds) {
-        this.tagIds = tagIds;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
     private String description;
+
 
     public Blog() {
     }
@@ -128,6 +115,14 @@ public class Blog {
         this.shareStatement = shareStatement;
     }
 
+    public boolean isCommentable() {
+        return commentable;
+    }
+
+    public void setCommentable(boolean commentable) {
+        this.commentable = commentable;
+    }
+
     public boolean isPublished() {
         return published;
     }
@@ -136,12 +131,12 @@ public class Blog {
         this.published = published;
     }
 
-    public boolean isRecommened() {
+    public boolean isRecommend() {
         return recommend;
     }
 
-    public void setRecommened(boolean recommened) {
-        this.recommend = recommened;
+    public void setRecommend(boolean recommend) {
+        this.recommend = recommend;
     }
 
     public Date getCreateTime() {
@@ -176,6 +171,7 @@ public class Blog {
         this.tags = tags;
     }
 
+
     public User getUser() {
         return user;
     }
@@ -183,6 +179,7 @@ public class Blog {
     public void setUser(User user) {
         this.user = user;
     }
+
 
     public List<Comment> getComments() {
         return comments;
@@ -192,26 +189,26 @@ public class Blog {
         this.comments = comments;
     }
 
-    public boolean isRecommend() {
-        return recommend;
+
+    public String getTagIds() {
+        return tagIds;
     }
 
-    public void setRecommend(boolean recommend) {
-        this.recommend = recommend;
+    public void setTagIds(String tagIds) {
+        this.tagIds = tagIds;
     }
 
-    public boolean isCommentable() {
-        return commentable;
+    public String getDescription() {
+        return description;
     }
 
-    public void setCommentable(boolean commentable) {
-        this.commentable = commentable;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public void init() {
         this.tagIds = tagsToIds(this.getTags());
     }
-
 
     //1,2,3
     private String tagsToIds(List<Tag> tags) {
@@ -232,6 +229,7 @@ public class Blog {
         }
     }
 
+
     @Override
     public String toString() {
         return "Blog{" +
@@ -243,9 +241,9 @@ public class Blog {
                 ", views=" + views +
                 ", appreciation=" + appreciation +
                 ", shareStatement=" + shareStatement +
+                ", commentabled=" + commentable +
                 ", published=" + published +
                 ", recommend=" + recommend +
-                ", commentable=" + commentable +
                 ", createTime=" + createTime +
                 ", updateTime=" + updateTime +
                 ", type=" + type +
