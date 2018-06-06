@@ -1,302 +1,423 @@
-2018-06-06 00:00:04.256  INFO 9516 --- [Thread-21] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1700c9d4: startup date [Tue Jun 05 23:57:39 NZST 2018]; root of context hierarchy
-2018-06-06 00:00:04.266  INFO 9516 --- [Thread-21] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
-2018-06-06 00:00:04.266  INFO 9516 --- [Thread-21] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
-2018-06-06 00:00:04.268  INFO 9516 --- [Thread-21] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2018-06-06 00:00:04.269  INFO 9516 --- [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2018-06-06 00:00:04.273  INFO 9516 --- [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2018-06-06 00:00:08.382  INFO 10187 --- [restartedMain] com.enno.blog.BlogApplication            : Starting BlogApplication on Ennos-MBP.hub with PID 10187 (/Users/huangxiaolong/IdeaProjects/blog/target/classes started by huangxiaolong in /Users/huangxiaolong/IdeaProjects/blog)
-2018-06-06 00:00:08.383 DEBUG 10187 --- [restartedMain] com.enno.blog.BlogApplication            : Running with Spring Boot v2.0.1.RELEASE, Spring v5.0.5.RELEASE
-2018-06-06 00:00:08.384  INFO 10187 --- [restartedMain] com.enno.blog.BlogApplication            : The following profiles are active: dev
-2018-06-06 00:00:08.423  INFO 10187 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@400666af: startup date [Wed Jun 06 00:00:08 NZST 2018]; root of context hierarchy
-2018-06-06 00:00:09.408  INFO 10187 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f2d8a265] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-06-06 00:00:09.757  INFO 10187 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2018-06-06 00:00:09.774  INFO 10187 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2018-06-06 00:00:09.775  INFO 10187 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.29
-2018-06-06 00:00:09.791  INFO 10187 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/huangxiaolong/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
-2018-06-06 00:00:09.845  INFO 10187 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2018-06-06 00:00:09.845  INFO 10187 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1422 ms
-2018-06-06 00:00:09.953  INFO 10187 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
-2018-06-06 00:00:09.956  INFO 10187 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2018-06-06 00:00:09.956  INFO 10187 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2018-06-06 00:00:09.956  INFO 10187 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2018-06-06 00:00:09.956  INFO 10187 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2018-06-06 00:00:10.187  INFO 10187 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2018-06-06 00:00:10.490  INFO 10187 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2018-06-06 00:00:10.520  INFO 10187 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
-2018-06-06 00:00:10.529  INFO 10187 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2018-06-07 11:45:59.300  INFO 36912 --- [restartedMain] com.enno.blog.BlogApplication            : Starting BlogApplication on Ennos-MacBook-Pro.local with PID 36912 (/Users/huangxiaolong/IdeaProjects/blog/target/classes started by huangxiaolong in /Users/huangxiaolong/IdeaProjects/blog)
+2018-06-07 11:45:59.304 DEBUG 36912 --- [restartedMain] com.enno.blog.BlogApplication            : Running with Spring Boot v2.0.1.RELEASE, Spring v5.0.5.RELEASE
+2018-06-07 11:45:59.306  INFO 36912 --- [restartedMain] com.enno.blog.BlogApplication            : The following profiles are active: dev
+2018-06-07 11:45:59.497  INFO 36912 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@9a893e7: startup date [Thu Jun 07 11:45:59 NZST 2018]; root of context hierarchy
+2018-06-07 11:46:00.974  INFO 36912 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a664e7a4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-07 11:46:01.614  INFO 36912 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-06-07 11:46:01.645  INFO 36912 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-06-07 11:46:01.645  INFO 36912 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-06-07 11:46:01.661  INFO 36912 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/huangxiaolong/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-06-07 11:46:01.776  INFO 36912 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-06-07 11:46:01.777  INFO 36912 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2280 ms
+2018-06-07 11:46:01.916  INFO 36912 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-06-07 11:46:01.919  INFO 36912 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-06-07 11:46:01.920  INFO 36912 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-06-07 11:46:01.920  INFO 36912 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-06-07 11:46:01.920  INFO 36912 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-06-07 11:46:02.186  INFO 36912 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2018-06-07 11:46:03.262 ERROR 36912 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+java.sql.SQLException: Unsupported character encoding 'utf-8?useSSL=false'.
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:965) ~[mysql-connector-java-5.1.46.jar:5.1.46]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:898) ~[mysql-connector-java-5.1.46.jar:5.1.46]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:887) ~[mysql-connector-java-5.1.46.jar:5.1.46]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:861) ~[mysql-connector-java-5.1.46.jar:5.1.46]
+	at com.mysql.jdbc.ConnectionPropertiesImpl.postInitialization(ConnectionPropertiesImpl.java:2575) ~[mysql-connector-java-5.1.46.jar:5.1.46]
+	at com.mysql.jdbc.ConnectionPropertiesImpl.initializeProperties(ConnectionPropertiesImpl.java:2545) ~[mysql-connector-java-5.1.46.jar:5.1.46]
+	at com.mysql.jdbc.ConnectionImpl.initializeDriverProperties(ConnectionImpl.java:3134) ~[mysql-connector-java-5.1.46.jar:5.1.46]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:760) ~[mysql-connector-java-5.1.46.jar:5.1.46]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.46.jar:5.1.46]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_161]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_161]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_161]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_161]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.46.jar:5.1.46]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386) ~[mysql-connector-java-5.1.46.jar:5.1.46]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330) ~[mysql-connector-java-5.1.46.jar:5.1.46]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:117) ~[HikariCP-2.7.8.jar:na]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:123) ~[HikariCP-2.7.8.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:365) ~[HikariCP-2.7.8.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:194) ~[HikariCP-2.7.8.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:460) [HikariCP-2.7.8.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:534) [HikariCP-2.7.8.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) [HikariCP-2.7.8.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) [HikariCP-2.7.8.jar:na]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:151) [spring-jdbc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115) [spring-jdbc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78) [spring-jdbc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:318) [spring-jdbc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:355) [spring-jdbc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.DatabaseLookup.getDatabase(DatabaseLookup.java:72) [spring-boot-autoconfigure-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties.determineDatabase(JpaProperties.java:169) [spring-boot-autoconfigure-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.jpaVendorAdapter(JpaBaseConfiguration.java:111) [spring-boot-autoconfigure-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$c53baa13.CGLIB$jpaVendorAdapter$5(<generated>) [spring-boot-autoconfigure-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$c53baa13$$FastClassBySpringCGLIB$$fab765b2.invoke(<generated>) [spring-boot-autoconfigure-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) [spring-core-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:361) [spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$c53baa13.jpaVendorAdapter(<generated>) [spring-boot-autoconfigure-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_161]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_161]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_161]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_161]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:579) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1250) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1099) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:541) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1065) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:815) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:721) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:470) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1250) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1099) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:541) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1065) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:815) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:721) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:470) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1250) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1099) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:541) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1089) ~[spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:859) ~[spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at com.enno.blog.BlogApplication.main(BlogApplication.java:10) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_161]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_161]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_161]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_161]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+
+2018-06-07 11:46:03.270  WARN 36912 --- [restartedMain] o.s.b.a.orm.jpa.DatabaseLookup           : Unable to determine jdbc url from datasource
+
+org.springframework.jdbc.support.MetaDataAccessException: Could not get Connection for extracting meta-data; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: Unsupported character encoding 'utf-8?useSSL=false'.
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:327) ~[spring-jdbc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:355) ~[spring-jdbc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.DatabaseLookup.getDatabase(DatabaseLookup.java:72) ~[spring-boot-autoconfigure-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties.determineDatabase(JpaProperties.java:169) [spring-boot-autoconfigure-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.jpaVendorAdapter(JpaBaseConfiguration.java:111) [spring-boot-autoconfigure-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$c53baa13.CGLIB$jpaVendorAdapter$5(<generated>) [spring-boot-autoconfigure-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$c53baa13$$FastClassBySpringCGLIB$$fab765b2.invoke(<generated>) [spring-boot-autoconfigure-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) [spring-core-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:361) [spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$c53baa13.jpaVendorAdapter(<generated>) [spring-boot-autoconfigure-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_161]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_161]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_161]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_161]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:579) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1250) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1099) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:541) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1065) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:815) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:721) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:470) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1250) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1099) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:541) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1065) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:815) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:721) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:470) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1250) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1099) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:541) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1089) ~[spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:859) ~[spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at com.enno.blog.BlogApplication.main(BlogApplication.java:10) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_161]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_161]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_161]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_161]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: Unsupported character encoding 'utf-8?useSSL=false'.
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81) ~[spring-jdbc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:318) ~[spring-jdbc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	... 66 common frames omitted
+Caused by: java.sql.SQLException: Unsupported character encoding 'utf-8?useSSL=false'.
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:965) ~[mysql-connector-java-5.1.46.jar:5.1.46]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:898) ~[mysql-connector-java-5.1.46.jar:5.1.46]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:887) ~[mysql-connector-java-5.1.46.jar:5.1.46]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:861) ~[mysql-connector-java-5.1.46.jar:5.1.46]
+	at com.mysql.jdbc.ConnectionPropertiesImpl.postInitialization(ConnectionPropertiesImpl.java:2575) ~[mysql-connector-java-5.1.46.jar:5.1.46]
+	at com.mysql.jdbc.ConnectionPropertiesImpl.initializeProperties(ConnectionPropertiesImpl.java:2545) ~[mysql-connector-java-5.1.46.jar:5.1.46]
+	at com.mysql.jdbc.ConnectionImpl.initializeDriverProperties(ConnectionImpl.java:3134) ~[mysql-connector-java-5.1.46.jar:5.1.46]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:760) ~[mysql-connector-java-5.1.46.jar:5.1.46]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.46.jar:5.1.46]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_161]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_161]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_161]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_161]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.46.jar:5.1.46]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386) ~[mysql-connector-java-5.1.46.jar:5.1.46]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330) ~[mysql-connector-java-5.1.46.jar:5.1.46]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:117) ~[HikariCP-2.7.8.jar:na]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:123) ~[HikariCP-2.7.8.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:365) ~[HikariCP-2.7.8.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:194) ~[HikariCP-2.7.8.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:460) ~[HikariCP-2.7.8.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:534) ~[HikariCP-2.7.8.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-2.7.8.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-2.7.8.jar:na]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:151) ~[spring-jdbc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115) ~[spring-jdbc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78) ~[spring-jdbc-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	... 67 common frames omitted
+
+2018-06-07 11:46:03.304  INFO 36912 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-07 11:46:03.321  INFO 36912 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2018-06-06 00:00:10.569  INFO 10187 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.16.Final}
-2018-06-06 00:00:10.570  INFO 10187 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2018-06-06 00:00:10.592  INFO 10187 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-2018-06-06 00:00:10.699  INFO 10187 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2018-06-06 00:00:11.270  INFO 10187 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2018-06-06 00:00:11.799  INFO 10187 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-06 00:00:12.048  INFO 10187 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@400666af: startup date [Wed Jun 06 00:00:08 NZST 2018]; root of context hierarchy
-2018-06-06 00:00:12.075  WARN 10187 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2018-06-06 00:00:12.102  INFO 10187 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/delete],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.BlogController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2018-06-06 00:00:12.103  INFO 10187 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/search],methods=[POST]}" onto public java.lang.String com.enno.blog.web.admin.BlogController.search(org.springframework.data.domain.Pageable,com.enno.blog.vo.BlogQuery,org.springframework.ui.Model)
-2018-06-06 00:00:12.103  INFO 10187 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.BlogController.blogs(org.springframework.data.domain.Pageable,com.enno.blog.vo.BlogQuery,org.springframework.ui.Model)
-2018-06-06 00:00:12.103  INFO 10187 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/input],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.BlogController.editInput(java.lang.Long,org.springframework.ui.Model)
-2018-06-06 00:00:12.103  INFO 10187 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/input],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.BlogController.input(org.springframework.ui.Model)
-2018-06-06 00:00:12.103  INFO 10187 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[POST]}" onto public java.lang.String com.enno.blog.web.admin.BlogController.post(com.enno.blog.po.Blog,org.springframework.web.servlet.mvc.support.RedirectAttributes,javax.servlet.http.HttpSession)
-2018-06-06 00:00:12.104  INFO 10187 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.enno.blog.web.admin.LoginController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2018-06-06 00:00:12.104  INFO 10187 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.LoginController.loginPage()
-2018-06-06 00:00:12.105  INFO 10187 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.LoginController.logout(javax.servlet.http.HttpSession)
-2018-06-06 00:00:12.106  INFO 10187 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/delete],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.TagController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2018-06-06 00:00:12.106  INFO 10187 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/input],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.TagController.editInput(java.lang.Long,org.springframework.ui.Model)
-2018-06-06 00:00:12.106  INFO 10187 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}],methods=[POST]}" onto public java.lang.String com.enno.blog.web.admin.TagController.editPost(com.enno.blog.po.Tag,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2018-06-06 00:00:12.107  INFO 10187 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.TagController.tags(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2018-06-06 00:00:12.107  INFO 10187 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/input],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.TagController.input(org.springframework.ui.Model)
-2018-06-06 00:00:12.107  INFO 10187 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[POST]}" onto public java.lang.String com.enno.blog.web.admin.TagController.post(com.enno.blog.po.Tag,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2018-06-06 00:00:12.108  INFO 10187 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/delete],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.TypeController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2018-06-06 00:00:12.109  INFO 10187 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.TypeController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2018-06-06 00:00:12.109  INFO 10187 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/input],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.TypeController.editInput(java.lang.Long,org.springframework.ui.Model)
-2018-06-06 00:00:12.109  INFO 10187 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}],methods=[POST]}" onto public java.lang.String com.enno.blog.web.admin.TypeController.editPost(com.enno.blog.po.Type,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2018-06-06 00:00:12.109  INFO 10187 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/input],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.TypeController.input(org.springframework.ui.Model)
-2018-06-06 00:00:12.109  INFO 10187 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[POST]}" onto public java.lang.String com.enno.blog.web.admin.TypeController.post(com.enno.blog.po.Type,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2018-06-06 00:00:12.110  INFO 10187 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.enno.blog.web.indexController.index()
-2018-06-06 00:00:12.111  INFO 10187 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2018-06-06 00:00:12.111  INFO 10187 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2018-06-06 00:00:12.149  INFO 10187 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-06 00:00:12.149  INFO 10187 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-06 00:00:12.162  INFO 10187 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
-2018-06-06 00:00:12.239  INFO 10187 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2018-06-06 00:00:12.584  INFO 10187 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2018-06-06 00:00:12.621  INFO 10187 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2018-06-06 00:00:12.622  INFO 10187 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
-2018-06-06 00:00:12.626  INFO 10187 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
-2018-06-06 00:00:12.667  INFO 10187 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2018-06-06 00:00:12.670  INFO 10187 --- [restartedMain] com.enno.blog.BlogApplication            : Started BlogApplication in 4.592 seconds (JVM running for 6.319)
-2018-06-06 00:00:21.009  INFO 10187 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
-2018-06-06 00:00:21.009  INFO 10187 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
-2018-06-06 00:00:21.028  INFO 10187 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
-2018-06-06 00:00:27.882  INFO 10187 --- [http-nio-8080-exec-3] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2018-06-06 00:01:31.635  INFO 10187 --- [Thread-19] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@400666af: startup date [Wed Jun 06 00:00:08 NZST 2018]; root of context hierarchy
-2018-06-06 00:01:31.648  INFO 10187 --- [Thread-19] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
-2018-06-06 00:01:31.649  INFO 10187 --- [Thread-19] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
-2018-06-06 00:01:31.651  INFO 10187 --- [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2018-06-06 00:01:31.653  INFO 10187 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2018-06-06 00:01:31.663  INFO 10187 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2018-06-06 00:01:34.649  INFO 10531 --- [restartedMain] com.enno.blog.BlogApplication            : Starting BlogApplication on Ennos-MBP.hub with PID 10531 (/Users/huangxiaolong/IdeaProjects/blog/target/classes started by huangxiaolong in /Users/huangxiaolong/IdeaProjects/blog)
-2018-06-06 00:01:34.650 DEBUG 10531 --- [restartedMain] com.enno.blog.BlogApplication            : Running with Spring Boot v2.0.1.RELEASE, Spring v5.0.5.RELEASE
-2018-06-06 00:01:34.651  INFO 10531 --- [restartedMain] com.enno.blog.BlogApplication            : The following profiles are active: dev
-2018-06-06 00:01:34.697  INFO 10531 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@d2c07a6: startup date [Wed Jun 06 00:01:34 NZST 2018]; root of context hierarchy
-2018-06-06 00:01:36.020  INFO 10531 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$eb069887] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-06-06 00:01:36.412  INFO 10531 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2018-06-06 00:01:36.427  INFO 10531 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2018-06-06 00:01:36.428  INFO 10531 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.29
-2018-06-06 00:01:36.430  INFO 10531 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/huangxiaolong/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
-2018-06-06 00:01:36.482  INFO 10531 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2018-06-06 00:01:36.482  INFO 10531 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1785 ms
-2018-06-06 00:01:36.589  INFO 10531 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
-2018-06-06 00:01:36.592  INFO 10531 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2018-06-06 00:01:36.592  INFO 10531 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2018-06-06 00:01:36.592  INFO 10531 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2018-06-06 00:01:36.592  INFO 10531 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2018-06-06 00:01:36.826  INFO 10531 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2018-06-06 00:01:37.110  INFO 10531 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2018-06-06 00:01:37.141  INFO 10531 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
-2018-06-06 00:01:37.151  INFO 10531 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2018-06-07 11:46:03.435  INFO 36912 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.16.Final}
+2018-06-07 11:46:03.436  INFO 36912 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-06-07 11:46:03.494  INFO 36912 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-07 11:46:03.663  INFO 36912 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2018-06-07 11:46:04.666 ERROR 36912 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+java.sql.SQLException: Unsupported character encoding 'utf-8?useSSL=false'.
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:965) ~[mysql-connector-java-5.1.46.jar:5.1.46]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:898) ~[mysql-connector-java-5.1.46.jar:5.1.46]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:887) ~[mysql-connector-java-5.1.46.jar:5.1.46]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:861) ~[mysql-connector-java-5.1.46.jar:5.1.46]
+	at com.mysql.jdbc.ConnectionPropertiesImpl.postInitialization(ConnectionPropertiesImpl.java:2575) ~[mysql-connector-java-5.1.46.jar:5.1.46]
+	at com.mysql.jdbc.ConnectionPropertiesImpl.initializeProperties(ConnectionPropertiesImpl.java:2545) ~[mysql-connector-java-5.1.46.jar:5.1.46]
+	at com.mysql.jdbc.ConnectionImpl.initializeDriverProperties(ConnectionImpl.java:3134) ~[mysql-connector-java-5.1.46.jar:5.1.46]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:760) ~[mysql-connector-java-5.1.46.jar:5.1.46]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.46.jar:5.1.46]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_161]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_161]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_161]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_161]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.46.jar:5.1.46]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386) ~[mysql-connector-java-5.1.46.jar:5.1.46]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330) ~[mysql-connector-java-5.1.46.jar:5.1.46]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:117) ~[HikariCP-2.7.8.jar:na]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:123) ~[HikariCP-2.7.8.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:365) ~[HikariCP-2.7.8.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:194) ~[HikariCP-2.7.8.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:460) [HikariCP-2.7.8.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:534) [HikariCP-2.7.8.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) [HikariCP-2.7.8.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) [HikariCP-2.7.8.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) [hibernate-core-5.2.16.Final.jar:5.2.16.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180) [hibernate-core-5.2.16.Final.jar:5.2.16.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) [hibernate-core-5.2.16.Final.jar:5.2.16.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) [hibernate-core-5.2.16.Final.jar:5.2.16.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:88) [hibernate-core-5.2.16.Final.jar:5.2.16.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:259) [hibernate-core-5.2.16.Final.jar:5.2.16.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:233) [hibernate-core-5.2.16.Final.jar:5.2.16.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:210) [hibernate-core-5.2.16.Final.jar:5.2.16.Final]
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:51) [hibernate-core-5.2.16.Final.jar:5.2.16.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:94) [hibernate-core-5.2.16.Final.jar:5.2.16.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:242) [hibernate-core-5.2.16.Final.jar:5.2.16.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:210) [hibernate-core-5.2.16.Final.jar:5.2.16.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.handleTypes(MetadataBuildingProcess.java:352) [hibernate-core-5.2.16.Final.jar:5.2.16.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:111) [hibernate-core-5.2.16.Final.jar:5.2.16.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:861) [hibernate-core-5.2.16.Final.jar:5.2.16.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:888) [hibernate-core-5.2.16.Final.jar:5.2.16.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57) [spring-orm-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) [spring-orm-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390) [spring-orm-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377) [spring-orm-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) [spring-orm-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1761) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1698) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:579) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1089) ~[spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:859) ~[spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at com.enno.blog.BlogApplication.main(BlogApplication.java:10) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_161]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_161]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_161]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_161]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+
+2018-06-07 11:46:04.668  WARN 36912 --- [restartedMain] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata : Unsupported character encoding 'utf-8?useSSL=false'.
+2018-06-07 11:46:04.672  WARN 36912 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2018-06-07 11:46:04.679  INFO 36912 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2018-06-07 11:46:04.696  INFO 36912 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-06-07 11:46:04.703 ERROR 36912 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1702) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:579) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1089) ~[spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:859) ~[spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140) ~[spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) [spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395) [spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) [spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255) [spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243) [spring-boot-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at com.enno.blog.BlogApplication.main(BlogApplication.java:10) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_161]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_161]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_161]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_161]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:271) ~[hibernate-core-5.2.16.Final.jar:5.2.16.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:233) ~[hibernate-core-5.2.16.Final.jar:5.2.16.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:210) ~[hibernate-core-5.2.16.Final.jar:5.2.16.Final]
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:51) ~[hibernate-core-5.2.16.Final.jar:5.2.16.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:94) ~[hibernate-core-5.2.16.Final.jar:5.2.16.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:242) ~[hibernate-core-5.2.16.Final.jar:5.2.16.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:210) ~[hibernate-core-5.2.16.Final.jar:5.2.16.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.handleTypes(MetadataBuildingProcess.java:352) ~[hibernate-core-5.2.16.Final.jar:5.2.16.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:111) ~[hibernate-core-5.2.16.Final.jar:5.2.16.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:861) ~[hibernate-core-5.2.16.Final.jar:5.2.16.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:888) ~[hibernate-core-5.2.16.Final.jar:5.2.16.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57) ~[spring-orm-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390) ~[spring-orm-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377) ~[spring-orm-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1761) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1698) ~[spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	... 21 common frames omitted
+Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:100) ~[hibernate-core-5.2.16.Final.jar:5.2.16.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:54) ~[hibernate-core-5.2.16.Final.jar:5.2.16.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:137) ~[hibernate-core-5.2.16.Final.jar:5.2.16.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.2.16.Final.jar:5.2.16.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:88) ~[hibernate-core-5.2.16.Final.jar:5.2.16.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:259) ~[hibernate-core-5.2.16.Final.jar:5.2.16.Final]
+	... 38 common frames omitted
+
+2018-06-07 11:47:21.574  INFO 37215 --- [restartedMain] com.enno.blog.BlogApplication            : Starting BlogApplication on Ennos-MacBook-Pro.local with PID 37215 (/Users/huangxiaolong/IdeaProjects/blog/target/classes started by huangxiaolong in /Users/huangxiaolong/IdeaProjects/blog)
+2018-06-07 11:47:21.576 DEBUG 37215 --- [restartedMain] com.enno.blog.BlogApplication            : Running with Spring Boot v2.0.1.RELEASE, Spring v5.0.5.RELEASE
+2018-06-07 11:47:21.577  INFO 37215 --- [restartedMain] com.enno.blog.BlogApplication            : The following profiles are active: dev
+2018-06-07 11:47:21.640  INFO 37215 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2e4e519e: startup date [Thu Jun 07 11:47:21 NZST 2018]; root of context hierarchy
+2018-06-07 11:47:22.865  INFO 37215 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$608e5d24] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-07 11:47:23.253  INFO 37215 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-06-07 11:47:23.269  INFO 37215 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-06-07 11:47:23.269  INFO 37215 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-06-07 11:47:23.272  INFO 37215 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/huangxiaolong/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-06-07 11:47:23.322  INFO 37215 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-06-07 11:47:23.322  INFO 37215 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1682 ms
+2018-06-07 11:47:23.429  INFO 37215 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-06-07 11:47:23.432  INFO 37215 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-06-07 11:47:23.433  INFO 37215 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-06-07 11:47:23.433  INFO 37215 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-06-07 11:47:23.433  INFO 37215 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-06-07 11:47:23.644  INFO 37215 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2018-06-07 11:47:23.820  INFO 37215 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2018-06-07 11:47:23.857  INFO 37215 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-07 11:47:23.866  INFO 37215 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2018-06-06 00:01:37.190  INFO 10531 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.16.Final}
-2018-06-06 00:01:37.191  INFO 10531 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2018-06-06 00:01:37.214  INFO 10531 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-2018-06-06 00:01:37.313  INFO 10531 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2018-06-06 00:01:37.862  INFO 10531 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2018-06-06 00:01:38.350  INFO 10531 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-06 00:01:38.599  INFO 10531 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@d2c07a6: startup date [Wed Jun 06 00:01:34 NZST 2018]; root of context hierarchy
-2018-06-06 00:01:38.632  WARN 10531 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2018-06-06 00:01:38.662  INFO 10531 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/delete],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.BlogController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2018-06-06 00:01:38.662  INFO 10531 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/search],methods=[POST]}" onto public java.lang.String com.enno.blog.web.admin.BlogController.search(org.springframework.data.domain.Pageable,com.enno.blog.vo.BlogQuery,org.springframework.ui.Model)
-2018-06-06 00:01:38.663  INFO 10531 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/input],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.BlogController.input(org.springframework.ui.Model)
-2018-06-06 00:01:38.663  INFO 10531 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.BlogController.blogs(org.springframework.data.domain.Pageable,com.enno.blog.vo.BlogQuery,org.springframework.ui.Model)
-2018-06-06 00:01:38.663  INFO 10531 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/input],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.BlogController.editInput(java.lang.Long,org.springframework.ui.Model)
-2018-06-06 00:01:38.663  INFO 10531 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[POST]}" onto public java.lang.String com.enno.blog.web.admin.BlogController.post(com.enno.blog.po.Blog,org.springframework.web.servlet.mvc.support.RedirectAttributes,javax.servlet.http.HttpSession)
-2018-06-06 00:01:38.664  INFO 10531 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.enno.blog.web.admin.LoginController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2018-06-06 00:01:38.665  INFO 10531 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.LoginController.loginPage()
-2018-06-06 00:01:38.665  INFO 10531 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.LoginController.logout(javax.servlet.http.HttpSession)
-2018-06-06 00:01:38.666  INFO 10531 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/delete],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.TagController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2018-06-06 00:01:38.666  INFO 10531 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.TagController.tags(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2018-06-06 00:01:38.667  INFO 10531 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/input],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.TagController.input(org.springframework.ui.Model)
-2018-06-06 00:01:38.667  INFO 10531 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/input],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.TagController.editInput(java.lang.Long,org.springframework.ui.Model)
-2018-06-06 00:01:38.667  INFO 10531 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}],methods=[POST]}" onto public java.lang.String com.enno.blog.web.admin.TagController.editPost(com.enno.blog.po.Tag,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2018-06-06 00:01:38.667  INFO 10531 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[POST]}" onto public java.lang.String com.enno.blog.web.admin.TagController.post(com.enno.blog.po.Tag,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2018-06-06 00:01:38.669  INFO 10531 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/delete],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.TypeController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2018-06-06 00:01:38.669  INFO 10531 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.TypeController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2018-06-06 00:01:38.669  INFO 10531 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/input],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.TypeController.input(org.springframework.ui.Model)
-2018-06-06 00:01:38.669  INFO 10531 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/input],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.TypeController.editInput(java.lang.Long,org.springframework.ui.Model)
-2018-06-06 00:01:38.669  INFO 10531 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}],methods=[POST]}" onto public java.lang.String com.enno.blog.web.admin.TypeController.editPost(com.enno.blog.po.Type,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2018-06-06 00:01:38.670  INFO 10531 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[POST]}" onto public java.lang.String com.enno.blog.web.admin.TypeController.post(com.enno.blog.po.Type,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2018-06-06 00:01:38.670  INFO 10531 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.enno.blog.web.indexController.index()
-2018-06-06 00:01:38.672  INFO 10531 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2018-06-06 00:01:38.672  INFO 10531 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2018-06-06 00:01:38.712  INFO 10531 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-06 00:01:38.712  INFO 10531 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-06 00:01:38.728  INFO 10531 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
-2018-06-06 00:01:38.854  INFO 10531 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2018-06-06 00:01:39.123  INFO 10531 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2018-06-06 00:01:39.151  INFO 10531 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2018-06-06 00:01:39.152  INFO 10531 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
-2018-06-06 00:01:39.157  INFO 10531 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
-2018-06-06 00:01:39.196  INFO 10531 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2018-06-06 00:01:39.199  INFO 10531 --- [restartedMain] com.enno.blog.BlogApplication            : Started BlogApplication in 4.889 seconds (JVM running for 5.564)
-2018-06-06 00:01:49.854  INFO 10531 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
-2018-06-06 00:01:49.855  INFO 10531 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
-2018-06-06 00:01:49.874  INFO 10531 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms
-2018-06-06 00:01:56.822  INFO 10531 --- [http-nio-8080-exec-3] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2018-06-06 00:03:18.722  INFO 10531 --- [Thread-19] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@d2c07a6: startup date [Wed Jun 06 00:01:34 NZST 2018]; root of context hierarchy
-2018-06-06 00:03:18.728  INFO 10531 --- [Thread-19] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
-2018-06-06 00:03:18.728  INFO 10531 --- [Thread-19] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
-2018-06-06 00:03:18.729  INFO 10531 --- [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2018-06-06 00:03:18.731  INFO 10531 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2018-06-06 00:03:18.737  INFO 10531 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2018-06-06 00:03:21.796  INFO 10893 --- [restartedMain] com.enno.blog.BlogApplication            : Starting BlogApplication on Ennos-MBP.hub with PID 10893 (/Users/huangxiaolong/IdeaProjects/blog/target/classes started by huangxiaolong in /Users/huangxiaolong/IdeaProjects/blog)
-2018-06-06 00:03:21.797 DEBUG 10893 --- [restartedMain] com.enno.blog.BlogApplication            : Running with Spring Boot v2.0.1.RELEASE, Spring v5.0.5.RELEASE
-2018-06-06 00:03:21.799  INFO 10893 --- [restartedMain] com.enno.blog.BlogApplication            : The following profiles are active: dev
-2018-06-06 00:03:21.856  INFO 10893 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5b869db6: startup date [Wed Jun 06 00:03:21 NZST 2018]; root of context hierarchy
-2018-06-06 00:03:23.164  INFO 10893 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2d251fde] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-06-06 00:03:23.534  INFO 10893 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2018-06-06 00:03:23.552  INFO 10893 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2018-06-06 00:03:23.552  INFO 10893 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.29
-2018-06-06 00:03:23.556  INFO 10893 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/huangxiaolong/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
-2018-06-06 00:03:23.607  INFO 10893 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2018-06-06 00:03:23.607  INFO 10893 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1751 ms
-2018-06-06 00:03:23.714  INFO 10893 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
-2018-06-06 00:03:23.717  INFO 10893 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2018-06-06 00:03:23.717  INFO 10893 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2018-06-06 00:03:23.717  INFO 10893 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2018-06-06 00:03:23.717  INFO 10893 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2018-06-06 00:03:23.949  INFO 10893 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2018-06-06 00:03:24.244  INFO 10893 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2018-06-06 00:03:24.274  INFO 10893 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
-2018-06-06 00:03:24.283  INFO 10893 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2018-06-06 00:03:24.322  INFO 10893 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.16.Final}
-2018-06-06 00:03:24.323  INFO 10893 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2018-06-06 00:03:24.345  INFO 10893 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-2018-06-06 00:03:24.449  INFO 10893 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2018-06-06 00:03:24.995  INFO 10893 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2018-06-06 00:03:25.486  INFO 10893 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-06 00:03:25.745  INFO 10893 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5b869db6: startup date [Wed Jun 06 00:03:21 NZST 2018]; root of context hierarchy
-2018-06-06 00:03:25.776  WARN 10893 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2018-06-06 00:03:25.800  INFO 10893 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/delete],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.BlogController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2018-06-06 00:03:25.801  INFO 10893 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/search],methods=[POST]}" onto public java.lang.String com.enno.blog.web.admin.BlogController.search(org.springframework.data.domain.Pageable,com.enno.blog.vo.BlogQuery,org.springframework.ui.Model)
-2018-06-06 00:03:25.801  INFO 10893 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/input],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.BlogController.input(org.springframework.ui.Model)
-2018-06-06 00:03:25.801  INFO 10893 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[POST]}" onto public java.lang.String com.enno.blog.web.admin.BlogController.post(com.enno.blog.po.Blog,org.springframework.web.servlet.mvc.support.RedirectAttributes,javax.servlet.http.HttpSession)
-2018-06-06 00:03:25.802  INFO 10893 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.BlogController.blogs(org.springframework.data.domain.Pageable,com.enno.blog.vo.BlogQuery,org.springframework.ui.Model)
-2018-06-06 00:03:25.802  INFO 10893 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/input],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.BlogController.editInput(java.lang.Long,org.springframework.ui.Model)
-2018-06-06 00:03:25.803  INFO 10893 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.LoginController.logout(javax.servlet.http.HttpSession)
-2018-06-06 00:03:25.803  INFO 10893 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.LoginController.loginPage()
-2018-06-06 00:03:25.803  INFO 10893 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.enno.blog.web.admin.LoginController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2018-06-06 00:03:25.804  INFO 10893 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/delete],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.TagController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2018-06-06 00:03:25.805  INFO 10893 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.TagController.tags(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2018-06-06 00:03:25.805  INFO 10893 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/input],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.TagController.input(org.springframework.ui.Model)
-2018-06-06 00:03:25.805  INFO 10893 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}],methods=[POST]}" onto public java.lang.String com.enno.blog.web.admin.TagController.editPost(com.enno.blog.po.Tag,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2018-06-06 00:03:25.805  INFO 10893 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[POST]}" onto public java.lang.String com.enno.blog.web.admin.TagController.post(com.enno.blog.po.Tag,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2018-06-06 00:03:25.805  INFO 10893 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/input],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.TagController.editInput(java.lang.Long,org.springframework.ui.Model)
-2018-06-06 00:03:25.807  INFO 10893 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/delete],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.TypeController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2018-06-06 00:03:25.807  INFO 10893 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.TypeController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2018-06-06 00:03:25.807  INFO 10893 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/input],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.TypeController.input(org.springframework.ui.Model)
-2018-06-06 00:03:25.807  INFO 10893 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}],methods=[POST]}" onto public java.lang.String com.enno.blog.web.admin.TypeController.editPost(com.enno.blog.po.Type,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2018-06-06 00:03:25.807  INFO 10893 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[POST]}" onto public java.lang.String com.enno.blog.web.admin.TypeController.post(com.enno.blog.po.Type,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2018-06-06 00:03:25.808  INFO 10893 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/input],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.TypeController.editInput(java.lang.Long,org.springframework.ui.Model)
-2018-06-06 00:03:25.808  INFO 10893 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.enno.blog.web.indexController.index()
-2018-06-06 00:03:25.810  INFO 10893 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2018-06-06 00:03:25.810  INFO 10893 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2018-06-06 00:03:25.856  INFO 10893 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-06 00:03:25.856  INFO 10893 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-06 00:03:25.872  INFO 10893 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
-2018-06-06 00:03:25.985  INFO 10893 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2018-06-06 00:03:26.259  INFO 10893 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2018-06-06 00:03:26.283  INFO 10893 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2018-06-06 00:03:26.285  INFO 10893 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
-2018-06-06 00:03:26.289  INFO 10893 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
-2018-06-06 00:03:26.326  INFO 10893 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2018-06-06 00:03:26.329  INFO 10893 --- [restartedMain] com.enno.blog.BlogApplication            : Started BlogApplication in 4.925 seconds (JVM running for 5.599)
-2018-06-06 00:03:33.486  INFO 10893 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
-2018-06-06 00:03:33.487  INFO 10893 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
-2018-06-06 00:03:33.507  INFO 10893 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
-2018-06-06 00:03:40.231  INFO 10893 --- [http-nio-8080-exec-3] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2018-06-06 00:08:29.168  INFO 10893 --- [Thread-19] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5b869db6: startup date [Wed Jun 06 00:03:21 NZST 2018]; root of context hierarchy
-2018-06-06 00:08:29.173  INFO 10893 --- [Thread-19] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
-2018-06-06 00:08:29.174  INFO 10893 --- [Thread-19] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
-2018-06-06 00:08:29.176  INFO 10893 --- [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2018-06-06 00:08:29.177  INFO 10893 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2018-06-06 00:08:29.182  INFO 10893 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2018-06-06 00:08:32.515  INFO 11967 --- [restartedMain] com.enno.blog.BlogApplication            : Starting BlogApplication on Ennos-MBP.hub with PID 11967 (/Users/huangxiaolong/IdeaProjects/blog/target/classes started by huangxiaolong in /Users/huangxiaolong/IdeaProjects/blog)
-2018-06-06 00:08:32.517 DEBUG 11967 --- [restartedMain] com.enno.blog.BlogApplication            : Running with Spring Boot v2.0.1.RELEASE, Spring v5.0.5.RELEASE
-2018-06-06 00:08:32.519  INFO 11967 --- [restartedMain] com.enno.blog.BlogApplication            : The following profiles are active: dev
-2018-06-06 00:08:32.585  INFO 11967 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3b9d6752: startup date [Wed Jun 06 00:08:32 NZST 2018]; root of context hierarchy
-2018-06-06 00:08:33.912  INFO 11967 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3cdf7f82] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-06-06 00:08:34.281  INFO 11967 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2018-06-06 00:08:34.296  INFO 11967 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2018-06-06 00:08:34.297  INFO 11967 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.29
-2018-06-06 00:08:34.299  INFO 11967 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/huangxiaolong/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
-2018-06-06 00:08:34.349  INFO 11967 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2018-06-06 00:08:34.350  INFO 11967 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1765 ms
-2018-06-06 00:08:34.460  INFO 11967 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
-2018-06-06 00:08:34.463  INFO 11967 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2018-06-06 00:08:34.464  INFO 11967 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2018-06-06 00:08:34.464  INFO 11967 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2018-06-06 00:08:34.464  INFO 11967 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2018-06-06 00:08:34.702  INFO 11967 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2018-06-06 00:08:34.994  INFO 11967 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2018-06-06 00:08:35.027  INFO 11967 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
-2018-06-06 00:08:35.036  INFO 11967 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2018-06-06 00:08:35.075  INFO 11967 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.16.Final}
-2018-06-06 00:08:35.076  INFO 11967 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2018-06-06 00:08:35.098  INFO 11967 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-2018-06-06 00:08:35.199  INFO 11967 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2018-06-06 00:08:35.720  INFO 11967 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2018-06-06 00:08:36.294  INFO 11967 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-06 00:08:36.546  INFO 11967 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3b9d6752: startup date [Wed Jun 06 00:08:32 NZST 2018]; root of context hierarchy
-2018-06-06 00:08:36.574  WARN 11967 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2018-06-06 00:08:36.599  INFO 11967 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/delete],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.BlogController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2018-06-06 00:08:36.600  INFO 11967 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/search],methods=[POST]}" onto public java.lang.String com.enno.blog.web.admin.BlogController.search(org.springframework.data.domain.Pageable,com.enno.blog.vo.BlogQuery,org.springframework.ui.Model)
-2018-06-06 00:08:36.600  INFO 11967 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/input],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.BlogController.input(org.springframework.ui.Model)
-2018-06-06 00:08:36.600  INFO 11967 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[POST]}" onto public java.lang.String com.enno.blog.web.admin.BlogController.post(com.enno.blog.po.Blog,org.springframework.web.servlet.mvc.support.RedirectAttributes,javax.servlet.http.HttpSession)
-2018-06-06 00:08:36.600  INFO 11967 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.BlogController.blogs(org.springframework.data.domain.Pageable,com.enno.blog.vo.BlogQuery,org.springframework.ui.Model)
-2018-06-06 00:08:36.601  INFO 11967 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/input],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.BlogController.editInput(java.lang.Long,org.springframework.ui.Model)
-2018-06-06 00:08:36.601  INFO 11967 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.enno.blog.web.admin.LoginController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2018-06-06 00:08:36.601  INFO 11967 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.LoginController.loginPage()
-2018-06-06 00:08:36.602  INFO 11967 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.LoginController.logout(javax.servlet.http.HttpSession)
-2018-06-06 00:08:36.603  INFO 11967 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/delete],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.TagController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2018-06-06 00:08:36.604  INFO 11967 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.TagController.tags(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2018-06-06 00:08:36.604  INFO 11967 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/input],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.TagController.input(org.springframework.ui.Model)
-2018-06-06 00:08:36.604  INFO 11967 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[POST]}" onto public java.lang.String com.enno.blog.web.admin.TagController.post(com.enno.blog.po.Tag,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2018-06-06 00:08:36.604  INFO 11967 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/input],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.TagController.editInput(java.lang.Long,org.springframework.ui.Model)
-2018-06-06 00:08:36.604  INFO 11967 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}],methods=[POST]}" onto public java.lang.String com.enno.blog.web.admin.TagController.editPost(com.enno.blog.po.Tag,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2018-06-06 00:08:36.606  INFO 11967 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/delete],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.TypeController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2018-06-06 00:08:36.606  INFO 11967 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.TypeController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
-2018-06-06 00:08:36.606  INFO 11967 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/input],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.TypeController.input(org.springframework.ui.Model)
-2018-06-06 00:08:36.606  INFO 11967 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[POST]}" onto public java.lang.String com.enno.blog.web.admin.TypeController.post(com.enno.blog.po.Type,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2018-06-06 00:08:36.606  INFO 11967 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/input],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.TypeController.editInput(java.lang.Long,org.springframework.ui.Model)
-2018-06-06 00:08:36.606  INFO 11967 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}],methods=[POST]}" onto public java.lang.String com.enno.blog.web.admin.TypeController.editPost(com.enno.blog.po.Type,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2018-06-06 00:08:36.607  INFO 11967 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.enno.blog.web.indexController.index()
-2018-06-06 00:08:36.608  INFO 11967 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2018-06-06 00:08:36.609  INFO 11967 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2018-06-06 00:08:36.643  INFO 11967 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-06 00:08:36.643  INFO 11967 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-06 00:08:36.656  INFO 11967 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
-2018-06-06 00:08:36.733  INFO 11967 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2018-06-06 00:08:37.001  INFO 11967 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2018-06-06 00:08:37.029  INFO 11967 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2018-06-06 00:08:37.030  INFO 11967 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
-2018-06-06 00:08:37.035  INFO 11967 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
-2018-06-06 00:08:37.073  INFO 11967 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2018-06-06 00:08:37.076  INFO 11967 --- [restartedMain] com.enno.blog.BlogApplication            : Started BlogApplication in 4.908 seconds (JVM running for 5.716)
-2018-06-06 00:08:44.014  INFO 11967 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
-2018-06-06 00:08:44.014  INFO 11967 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
-2018-06-06 00:08:44.037  INFO 11967 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
-2018-06-06 00:08:50.927  INFO 11967 --- [http-nio-8080-exec-3] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2018-06-06 00:09:20.436  INFO 11967 --- [Thread-20] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3b9d6752: startup date [Wed Jun 06 00:08:32 NZST 2018]; root of context hierarchy
-2018-06-06 00:09:20.440  INFO 11967 --- [Thread-20] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
-2018-06-06 00:09:20.440  INFO 11967 --- [Thread-20] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
-2018-06-06 00:09:20.442  INFO 11967 --- [Thread-20] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2018-06-06 00:09:20.444  INFO 11967 --- [Thread-20] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2018-06-06 00:09:20.450  INFO 11967 --- [Thread-20] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2018-06-07 11:47:23.915  INFO 37215 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.16.Final}
+2018-06-07 11:47:23.916  INFO 37215 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-06-07 11:47:23.948  INFO 37215 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-07 11:47:24.046  INFO 37215 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-06-07 11:47:24.804  INFO 37215 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-07 11:47:25.430  INFO 37215 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 11:47:25.727  INFO 37215 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2e4e519e: startup date [Thu Jun 07 11:47:21 NZST 2018]; root of context hierarchy
+2018-06-07 11:47:25.771  WARN 37215 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-06-07 11:47:25.805  INFO 37215 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/delete],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.BlogController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2018-06-07 11:47:25.805  INFO 37215 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/search],methods=[POST]}" onto public java.lang.String com.enno.blog.web.admin.BlogController.search(org.springframework.data.domain.Pageable,com.enno.blog.vo.BlogQuery,org.springframework.ui.Model)
+2018-06-07 11:47:25.805  INFO 37215 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.BlogController.blogs(org.springframework.data.domain.Pageable,com.enno.blog.vo.BlogQuery,org.springframework.ui.Model)
+2018-06-07 11:47:25.806  INFO 37215 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/input],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.BlogController.editInput(java.lang.Long,org.springframework.ui.Model)
+2018-06-07 11:47:25.806  INFO 37215 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/input],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.BlogController.input(org.springframework.ui.Model)
+2018-06-07 11:47:25.806  INFO 37215 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[POST]}" onto public java.lang.String com.enno.blog.web.admin.BlogController.post(com.enno.blog.po.Blog,org.springframework.web.servlet.mvc.support.RedirectAttributes,javax.servlet.http.HttpSession)
+2018-06-07 11:47:25.807  INFO 37215 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.enno.blog.web.admin.LoginController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2018-06-07 11:47:25.807  INFO 37215 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.LoginController.loginPage()
+2018-06-07 11:47:25.807  INFO 37215 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.LoginController.logout(javax.servlet.http.HttpSession)
+2018-06-07 11:47:25.808  INFO 37215 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/delete],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.TagController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2018-06-07 11:47:25.809  INFO 37215 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/input],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.TagController.editInput(java.lang.Long,org.springframework.ui.Model)
+2018-06-07 11:47:25.809  INFO 37215 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}],methods=[POST]}" onto public java.lang.String com.enno.blog.web.admin.TagController.editPost(com.enno.blog.po.Tag,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2018-06-07 11:47:25.809  INFO 37215 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.TagController.tags(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2018-06-07 11:47:25.809  INFO 37215 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/input],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.TagController.input(org.springframework.ui.Model)
+2018-06-07 11:47:25.809  INFO 37215 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[POST]}" onto public java.lang.String com.enno.blog.web.admin.TagController.post(com.enno.blog.po.Tag,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2018-06-07 11:47:25.811  INFO 37215 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/delete],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.TypeController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2018-06-07 11:47:25.811  INFO 37215 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/input],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.TypeController.editInput(java.lang.Long,org.springframework.ui.Model)
+2018-06-07 11:47:25.811  INFO 37215 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}],methods=[POST]}" onto public java.lang.String com.enno.blog.web.admin.TypeController.editPost(com.enno.blog.po.Type,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2018-06-07 11:47:25.811  INFO 37215 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.TypeController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2018-06-07 11:47:25.811  INFO 37215 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/input],methods=[GET]}" onto public java.lang.String com.enno.blog.web.admin.TypeController.input(org.springframework.ui.Model)
+2018-06-07 11:47:25.812  INFO 37215 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[POST]}" onto public java.lang.String com.enno.blog.web.admin.TypeController.post(com.enno.blog.po.Type,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2018-06-07 11:47:25.812  INFO 37215 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.enno.blog.web.indexController.index()
+2018-06-07 11:47:25.813  INFO 37215 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-07 11:47:25.814  INFO 37215 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-07 11:47:25.857  INFO 37215 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 11:47:25.857  INFO 37215 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-07 11:47:25.875  INFO 37215 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
+2018-06-07 11:47:25.989  INFO 37215 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2018-06-07 11:47:26.270  INFO 37215 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-06-07 11:47:26.298  INFO 37215 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-06-07 11:47:26.299  INFO 37215 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-06-07 11:47:26.304  INFO 37215 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-06-07 11:47:26.355  INFO 37215 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2018-06-07 11:47:26.359  INFO 37215 --- [restartedMain] com.enno.blog.BlogApplication            : Started BlogApplication in 5.15 seconds (JVM running for 5.857)
