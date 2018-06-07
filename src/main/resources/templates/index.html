@@ -47,18 +47,18 @@
                                     <h3 class="ui teal header">博客</h3>
                                 </div>
                                 <div class="right aligned column">
-                                    共 <h2 class="ui header orange m-inline-block m-text-thin">14</h2> 篇
+                                    共 <h2 class="ui header orange m-inline-block m-text-thin" th:text="${page.totalElements}">14</h2> 篇
                                 </div>
                             </div>
                         </div>
 
                         <!--content-->
                         <div class="ui attached segment">
-                            <div class="ui vertical m-padded-lr-wide segment">
-                                <div class="ui middle aligned stackable grid mobile reversed">
+                            <div class="ui m-padded vertical segment m-padded-lr-wide m-padded-tb-large" th:each="blog : ${page.content}">
+                                <div class="ui middle aligned mobile reversed stackable grid">
                                     <div class="eleven wide column">
-                                        <h3 class="ui header">深入理解JAVA虚拟机</h3>
-                                        <p class="m-text">A deeply ashamed Australian captain Steve Smith has admitted his team deliberately conspired to cheat on the third day of the third test by having Cameron Bancroft use tape to illegally tamper with the ball.
+                                        <h3 class="ui header"><a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="m-black" th:text="${blog.title}">深入理解JAVA虚拟机</a></h3>
+                                        <p class="m-text" th:text="|${blog.description}...|">A deeply ashamed Australian captain Steve Smith has admitted his team deliberately conspired to cheat on the third day of the third test by having Cameron Bancroft use tape to illegally tamper with the ball.
                                             While Bancroft has been charged by match referee Andy Pycroft and faces a one-test suspension the reputation of Smith and the Australian team is in tatters.
                                         </p>
                                         <div class="ui grid">
@@ -66,31 +66,32 @@
                                                 <div class="ui horizontal link list">
                                                     <div class="item">
                                                         <img src="../static/images/enno.jpg" th:src="@{/images/enno.jpg}" alt="" class="ui avatar image" style="width: 40px;height: 40px">
-                                                        <div class="content"><a href="#" class="header">Enno</a></div>
+                                                        <div class="content"><a href="#" class="header" th:text="${blog.user.nickname}">Enno</a></div>
                                                     </div>
                                                     <div class="item">
-                                                        <i class="calendar icon"></i> 2018-3-25
+                                                        <i class="calendar icon"></i> <span th:text="${#dates.format(blog.updateTime, 'yyyy-MM-dd')}">2018-3-25</span>
                                                     </div>
                                                     <div class="item">
-                                                        <i class="eye icon"></i> 2342
+                                                        <i class="eye icon"></i> <span th:text="${blog.views}">2342</span>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="right aligned five wide column">
-                                                <a href="#" target="_blank" class="ui teal label basic m-padded-tb-mini m-text-thin">认知升级</a>
+                                            <div class="right aligned five wide column middle aligned">
+                                                <a href="#" target="_blank" class="ui teal label basic m-padded-tb-mini m-text-thin" th:text="${blog.type.name}">认知升级</a>
                                             </div>
 
                                         </div>
                                     </div>
                                     <div class="five wide column middle aligned">
-                                        <a href="#" target="_blank">
-                                            <img src="https://images.pexels.com/photos/211707/pexels-photo-211707.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" class="ui rounded image" style="width: 400px;height: 200px">
+                                        <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank">
+                                            <img src="https://images.pexels.com/photos/211707/pexels-photo-211707.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" th:src="@{${blog.firstPicture}}" alt="" class="ui rounded image" style="width: 400px;height: 200px">
                                         </a>
                                     </div>
                                 </div>
 
                             </div>
                         </div>
+                        <!--/*-->
                         <div class="ui attached segment">
                             <div class="ui vertical m-padded-lr-wide segment">
                                 <div class="ui grid stackable mobile reversed">
@@ -169,15 +170,16 @@
 
                             </div>
                         </div>
+                        <!--*/-->
 
                         <!--bottom-->
-                        <div class="ui bottom attached segment">
+                        <div class="ui bottom attached segment" th:if="${page.totalPages}>1">
                             <div class="ui middle aligned two column grid">
                                 <div class="column">
-                                    <a href="#" class="ui teal mini basic button">上一页</a>
+                                    <a href="#" th:href="@{/(page=${page.number}-1)}" th:unless="${page.first}" class="ui teal mini basic button">上一页</a>
                                 </div>
                                 <div class="right aligned column">
-                                    <a href="#" class="ui teal mini basic button">下一页</a>
+                                    <a href="#" th:href="@{/(page=${page.number}+1)}" th:unless="${page.last}" class="ui teal mini basic button">下一页</a>
                                 </div>
                             </div>
                         </div>
@@ -201,11 +203,12 @@
                             </div>
                             <div class="ui teal segment">
                                 <div class="ui fluid vertical menu">
-                                    <a href="#" class="item">
-                                        算法设计
-                                        <div class="ui teal basic left pointing label">13</div>
+                                    <a href="#" class="item" th:each="type : ${types}">
+                                        <span th:text="${type.name}">算法设计</span>
+                                        <div class="ui teal basic left pointing label" th:text="${#arrays.length(type.blogs)}">13</div>
                                     </a>
                                 </div>
+                                <!--/*-->
                                 <div class="ui fluid vertical menu attached">
                                     <a href="#" class="item">
                                         Web前端
@@ -230,6 +233,7 @@
                                         <div class="ui teal basic left pointing label">13</div>
                                     </a>
                                 </div>
+                                <!--*/-->
                             </div>
                         </div>
 
@@ -246,6 +250,10 @@
                                 </div>
                             </div>
                             <div class="ui teal segment">
+                                <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-tiny" th:each="tag : ${tags}">
+                                    <span th:text="${tag.name}">方法论</span> <div class="detail" th:text="${#arrays.length(tag.blogs)}">23</div>
+                                </a>
+                                <!--/*-->
                                 <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-tiny">
                                     方法论 <div class="detail">23</div>
                                 </a>
@@ -258,10 +266,7 @@
                                 <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-tiny">
                                     方法论 <div class="detail">23</div>
                                 </a>
-                                <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-tiny">
-                                    方法论 <div class="detail">23</div>
-                                </a>
-
+                                <!--*/-->
                             </div>
                         </div>
 
@@ -272,6 +277,10 @@
                                     <i class="bookmark icon"></i>最新推荐
                                 </div>
                             </div>
+                            <div class="ui segment" th:each="blog : ${recommendBlogs}">
+                                <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="m-black m-text-thin" th:text="${blog.title}">用户故事</a>
+                            </div>
+                            <!--/*-->
                             <div class="ui segment">
                                 <a href="#" target="_blank" class="m-black m-text-thin">用户故事</a>
                             </div>
@@ -290,9 +299,7 @@
                             <div class="ui segment">
                                 <a href="#" target="_blank" class="m-black m-text-thin">用户故事</a>
                             </div>
-                            <div class="ui segment">
-                                <a href="#" target="_blank" class="m-black m-text-thin">用户故事</a>
-                            </div>
+                            <!--*/-->
                         </div>
 
                         <!--二维码-->

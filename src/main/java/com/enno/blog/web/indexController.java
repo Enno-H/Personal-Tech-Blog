@@ -34,6 +34,10 @@ public class indexController {
         model.addAttribute("page",blogService.listBlog(pageable));
         model.addAttribute("types",typeService.listTypeTop(6));
         model.addAttribute("tags",tagService.listTagTop(10));
-        return "blog";
+        model.addAttribute("recommendBlogs",blogService.listRecommendBlogTop(8));
+        return "index";
     }
+
+    @GetMapping("/blog/{id}")
+    public String blog(){ return "blog";}
 }
