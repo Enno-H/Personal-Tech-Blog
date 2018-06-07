@@ -107,7 +107,10 @@
                     <label class="ui teal basic label">首图</label>
                     <input type="text" name="firstPicture" th:value="*{firstPicture}" placeholder="首图引用地址">
                 </div>
+            </div>
 
+            <div class="required field">
+                <textarea name="description" th:text="*{description}" placeholder="博客描述..." maxlength="200"></textarea>
             </div>
 
             <div class="inline fields">
@@ -229,11 +232,9 @@
         $('#blog-form').submit();
     });
 
-    $('.ui.tag.dropdown')
-        .dropdown({
-            allowAdditions: true
-        })
-    ;
+    $('.ui.tag.dropdown').dropdown({
+        allowAdditions: true
+    });
 
 
     $('.ui.form').form({
@@ -264,6 +265,13 @@
                 rules: [{
                     type : 'empty',
                     prompt: '标题：请输入博客首图'
+                }]
+            },
+            description : {
+                identifier: 'descripton',
+                rules:[{
+                    type : 'empty',
+                    prompt: '标题：请输入博客描述'
                 }]
             }
         }

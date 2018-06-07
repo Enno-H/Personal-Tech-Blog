@@ -6,7 +6,9 @@ import com.enno.blog.po.Tag;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -40,6 +42,13 @@ public class TagServiceImp implements TagService{
     @Override
     public List<Tag> listTag() {
         return tagRepository.findAll();
+    }
+
+    @Override
+    public List<Tag> listTagTop(Integer size) {
+        Sort sort = new Sort(Sort.Direction.DESC,"blog.size");
+        Pageable pageable = new PageRequest(0,size,sort);
+        return tagRepository.findTop(pageable);
     }
 
     @Override
