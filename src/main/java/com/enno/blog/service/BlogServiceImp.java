@@ -4,6 +4,7 @@ import com.enno.blog.NotFoundException;
 import com.enno.blog.dao.BlogRepository;
 import com.enno.blog.po.Blog;
 import com.enno.blog.po.Type;
+import com.enno.blog.util.MarkdownUtils;
 import com.enno.blog.vo.BlogQuery;
 import com.enno.blog.util.MyBeanUtils;
 import org.springframework.beans.BeanUtils;
@@ -36,6 +37,19 @@ public class BlogServiceImp implements BlogService {
     @Override
     public Blog getBlog(Long id) {
         return blogRepository.getOne(id);
+    }
+
+    @Override
+    public Blog getAndConvert(Long id) {
+        Blog blog = blogRepository.getOne(id);
+        if(blog == null){
+            throw new NotFoundException("该博客不存在");
+        }
+        Blog b = new Blog();
+        BeanUtils.copyProperties(blog,b);
+        String content = b.getContent();
+        b.setContent(MarkdownUtils.markdownToHtmlExtensions(content));
+        return b;
     }
 
     @Override
