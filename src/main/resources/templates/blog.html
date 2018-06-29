@@ -44,30 +44,29 @@
                 <div class="ui top attached segment">
                     <div class="ui horizontal link list">
                         <div class="item">
-                            <img src="../static/images/enno.jpg" alt="" class="ui avatar image" style="width: 40px;height: 40px">
-                            <div class="content"><a href="#" class="header">Enno</a></div>
+                            <img src="../static/images/enno.jpg" th:src="@{${blog.user.avatar}}" alt="" class="ui avatar image" style="width: 40px;height: 40px">
+                            <div class="content"><a href="#" class="header" th:src="@{${blog.user.nickname}}">Enno</a></div>
                         </div>
                         <div class="item">
-                            <i class="calendar icon"></i> 2018-3-25
+                            <i class="calendar icon"></i> <span th:text="${#dates.format(blog.updateTime, 'yyyy-MM-dd')}">2018-3-25</span>
                         </div>
                         <div class="item">
-                            <i class="eye icon"></i> 2342
+                            <i class="eye icon"></i> <span th:text="${blog.views}">2342</span>
                         </div>
                     </div>
                 </div>
-                <div class="ui attached segment">
-                    <!--图片-->
-                    <img src="https://images.pexels.com/photos/211707/pexels-photo-211707.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" class="ui fluid rounded image">
-                </div>
-                <div class="ui attached segment">
-                    <!--内容-->
-                    <div class="ui right aligned basic segment">
-                        <div class="ui orange basic label">转载</div>
+                    <div class="ui attached segment">
+                        <!--图片-->
+                        <img src="https://images.pexels.com/photos/211707/pexels-photo-211707.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" th:src="@{${blog.firstPicture}}" alt="" class="ui fluid rounded image">
                     </div>
-                    <h2 class="ui center aligned header">typo排版规则</h2>
-                    <br>
-
-                    <div id="content" class="typo  typo-selection js-toc-content m-padded-lr-responsive m-padded-tb-large">
+                    <div class="ui attached segment">
+                        <!--内容-->
+                        <div class="ui right aligned basic segment">
+                            <div class="ui orange basic label" th:text="${blog.flag}">转载</div>
+                        </div>
+                        <h2 class="ui center aligned header" th:text="${blog.title}">typo排版规则</h2>
+                        <br>
+                        <div id="content" class="typo  typo-selection js-toc-content m-padded-lr-responsive m-padded-tb-large" th:text="${blog.content}">
 
                         <h2 id="section1">一、关于 <i class="serif">Typo.css</i></h2>
 
@@ -432,50 +431,50 @@
                         <p><i class="serif">Typo.css</i> 基于 <a href="http://zh.wikipedia.org/wiki/MIT_License">MIT License</a> 开源，使用代码只需说明来源，或者引用 <a
                                 href="http://typo.sofi.sh/license.txt">license.txt</a> 即可。</p>
                     </div>
-                    <!-- #wrapper -->
-                    <a href="https://github.com/sofish/Typo.css" id="fork">
-                        <img alt="Fork me on GitHub" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
-                    </a>
-                    </div>
+                        <!-- #wrapper -->
+                        <a href="https://github.com/sofish/Typo.css" id="fork">
+                            <img alt="Fork me on GitHub" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
+                        </a>
 
-                    <!--标签-->
-                    <div class="m-padded-lr-responsive">
-                        <div class="ui basic teal left pointing label">方法论</div>
-                    </div>
 
-                    <!--赞赏-->
-                    <div class="ui center aligned basic segment">
-                        <button id="payButton" class="ui orange basic circular button">赞赏</button>
-                    </div>
-                    <div class="ui payQR flowing popup transition hidden">
-                        <div class="ui orange basic label">
-                            <div class="ui images" style="font-size: inherit !important;">
-                                <div class="image">
-                                    <img src="../static/images/wechat.jpg" alt="" class="ui rounded bordered image" style="width: 120px">
-                                    <div>支付宝</div>
-                                </div>
-                                <div class="image">
-                                    <img src="../static/images/wechat.jpg" alt="" class="ui rounded bordered image" style="width: 120px">
-                                    <div>微信</div>
+                        <!--标签-->
+                        <div class="m-padded-lr-responsive">
+                            <div class="ui basic teal left pointing label" th:each="tag : ${blog.tags}" th:text="${tag.name}">方法论</div>
+                        </div>
+
+                        <!--赞赏-->
+                        <div class="ui center aligned basic segment">
+                            <button id="payButton" class="ui orange basic circular button">赞赏</button>
+                        </div>
+                        <div class="ui payQR flowing popup transition hidden">
+                            <div class="ui orange basic label">
+                                <div class="ui images" style="font-size: inherit !important;">
+                                    <div class="image">
+                                        <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" alt="" class="ui rounded bordered image" style="width: 120px">
+                                        <div>支付宝</div>
+                                    </div>
+                                    <div class="image">
+                                        <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" alt="" class="ui rounded bordered image" style="width: 120px">
+                                        <div>微信</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
                 <div class="ui attached positive message">
                     <!--博客信息-->
                     <div class="ui middle aligned grid">
                         <div class="eleven wide column">
                             <ui class="list">
-                                <li>作者：Enno（联系作者）</li>
-                                <li>发表时间：2018-3-31 09:08</li>
+                                <li>作者：<span th:text="${blog.user.nickname}">Enno</span><a href="#" th:href="@{/about}" target="_blank">（联系作者）</a>（联系作者）</li>
+                                <li>发表时间：<span th:text="${#dates.format(blog.updateTime, 'yyyy-MM-dd HH:mm')}"></span></li>
                                 <li>版权声明：自由转载-非商用-非衍生-保持署名（创意共享3.0许可证）</li>
                                 <li>公众号转载：请在文末添加作者公众号二维码</li>
                             </ui>
                         </div>
                         <div class="five wide column">
-                            <img src="../static/images/wechat.jpg" alt="" class="ui right floated rounded bordered image" style="width: 110px">
+                            <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" alt="" class="ui right floated rounded bordered image" style="width: 110px">
                         </div>
                     </div>
                 </div>
