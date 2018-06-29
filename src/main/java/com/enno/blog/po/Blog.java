@@ -15,7 +15,9 @@ public class Blog {
 
     private String title;
 
+    @Column(length = 5000)
     private String content;
+
     private String firstPicture;
     private String flag;
     private Integer views;
