@@ -478,84 +478,88 @@
                         </div>
                     </div>
                 </div>
-                <div id="comment-container" class="ui bottom attached segment">
+                <div class="ui bottom attached segment">
                     <!--留言区域列表-->
-                    <div class="ui teal segment">
-                        <div class="ui threaded comments">
-                            <h3 class="ui dividing header">Comments</h3>
-                            <div class="comment">
-                                <a class="avatar">
-                                    <img src="https://unsplash.it/100/100?image=1005">
-                                </a>
-                                <div class="content">
-                                    <a class="author">Matt</a>
-                                    <div class="metadata">
-                                        <span class="date">Today at 5:42PM</span>
-                                    </div>
-                                    <div class="text">
-                                        How artistic!
-                                    </div>
-                                    <div class="actions">
-                                        <a class="reply">回复</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="comment">
-                                <a class="avatar">
-                                    <img src="https://unsplash.it/100/100?image=1005">
-                                </a>
-                                <div class="content">
-                                    <a class="author">Elliot Fu</a>
-                                    <div class="metadata">
-                                        <span class="date">Yesterday at 12:30AM</span>
-                                    </div>
-                                    <div class="text">
-                                        <p>This has been very useful for my research. Thanks as well!</p>
-                                    </div>
-                                    <div class="actions">
-                                        <a class="reply">回复</a>
+                    <div id="comment-container" class="ui teal segment">
+                        <div th:fragment="commentList">
+                            <div class="ui threaded comments" style="max-width: 100%;">
+                                <h3 class="ui dividing header">Comments</h3>
+                                <div class="comment">
+                                    <a class="avatar">
+                                        <img src="https://unsplash.it/100/100?image=1005">
+                                    </a>
+                                    <div class="content">
+                                        <a class="author">Matt</a>
+                                        <div class="metadata">
+                                            <span class="date">Today at 5:42PM</span>
+                                        </div>
+                                        <div class="text">
+                                            How artistic!
+                                        </div>
+                                        <div class="actions">
+                                            <a class="reply" data-commentid="1" data-commentnickname="Matt" onclick="reply(this)">回复</a>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="comments">
-                                    <div class="comment">
-                                        <a class="avatar">
-                                            <img src="https://unsplash.it/100/100?image=1005">
-                                        </a>
-                                        <div class="content">
-                                            <a class="author">Jenny Hess</a>
-                                            <div class="metadata">
-                                                <span class="date">Just now</span>
-                                            </div>
-                                            <div class="text">
-                                                Elliot you are always so right :)
-                                            </div>
-                                            <div class="actions">
-                                                <a class="reply">回复</a>
+                                <div class="comment">
+                                    <a class="avatar">
+                                        <img src="https://unsplash.it/100/100?image=1005">
+                                    </a>
+                                    <div class="content">
+                                        <a class="author">Elliot Fu</a>
+                                        <div class="metadata">
+                                            <span class="date">Yesterday at 12:30AM</span>
+                                        </div>
+                                        <div class="text">
+                                            <p>This has been very useful for my research. Thanks as well!</p>
+                                        </div>
+                                        <div class="actions">
+                                            <a class="reply">回复</a>
+                                        </div>
+                                    </div>
+                                    <div class="comments">
+                                        <div class="comment">
+                                            <a class="avatar">
+                                                <img src="https://unsplash.it/100/100?image=1005">
+                                            </a>
+                                            <div class="content">
+                                                <a class="author">Jenny Hess</a>
+                                                <div class="metadata">
+                                                    <span class="date">Just now</span>
+                                                </div>
+                                                <div class="text">
+                                                    Elliot you are always so right :)
+                                                </div>
+                                                <div class="actions">
+                                                    <a class="reply">回复</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="comment">
-                                <a class="avatar">
-                                    <img src="https://unsplash.it/100/100?image=1005">
-                                </a>
-                                <div class="content">
-                                    <a class="author">Joe Henderson</a>
-                                    <div class="metadata">
-                                        <span class="date">5 days ago</span>
-                                    </div>
-                                    <div class="text">
-                                        Dude, this is awesome. Thanks so much
-                                    </div>
-                                    <div class="actions">
-                                        <a class="reply">回复</a>
+                                <div class="comment">
+                                    <a class="avatar">
+                                        <img src="https://unsplash.it/100/100?image=1005">
+                                    </a>
+                                    <div class="content">
+                                        <a class="author">Joe Henderson</a>
+                                        <div class="metadata">
+                                            <span class="date">5 days ago</span>
+                                        </div>
+                                        <div class="text">
+                                            Dude, this is awesome. Thanks so much
+                                        </div>
+                                        <div class="actions">
+                                            <a class="reply">回复</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="ui form">
+                        <input type="hidden" name="blog.id" th:value="${blog.id}">
+                        <input type="hidden" name=";parentComment.id" value="-1">
                         <div class="field">
                             <textarea name="content" placeholder="请输入评论信息..."></textarea>
                         </div>
@@ -573,7 +577,7 @@
                                 </div>
                             </div>
                             <div class="field  m-margin-bottom-small m-mobile-wide">
-                                <button class="ui teal button m-mobile-wide"><i class="edit icon"></i>发布</button>
+                                <button id="commentpost-btn" type="button" class="ui teal button m-mobile-wide"><i class="edit icon"></i>发布</button>
                             </div>
                         </div>
 
@@ -711,7 +715,74 @@
                     }
                     console.log('Scrolled to waypoint!  ' + direction);
                 }
-            })
+            });
+
+            //评论表单验证
+            $('.ui.form').form({
+                fields: {
+                    title: {
+                        identifier: 'content',
+                        rules: [{
+                            type: 'empty',
+                            prompt: '请输入评论内容'
+                        }
+                        ]
+                    },
+                    content: {
+                        identifier: 'nickname',
+                        rules: [{
+                            type: 'empty',
+                            prompt: '请输入你的名称'
+                        }]
+                    },
+                    type: {
+                        identifier: 'email',
+                        rules: [{
+                            type: 'email',
+                            prompt: '请填写正确的邮箱地址'
+                        }]
+                    }
+                }
+            });
+
+            $('#commentpost-btn').click(function () {
+                var boo = $('.ui.form').form('validate form');
+                if (boo) {
+                    console.log('校验成功');
+                    postData();
+                } else {
+                    console.log('校验失败');
+                }
+
+            });
+
+            function postData() {
+                $("#comment-container").load(/*[[@{/comments}]]*/"",{
+                    "parentComment.id" : $("[name='parentComment.id']").val(),
+                    "blog.id" : $("[name='blog.id']").val(),
+                    "nickname": $("[name='nickname']").val(),
+                    "email"   : $("[name='email']").val(),
+                    "content" : $("[name='content']").val()
+                },function (responseTxt, statusTxt, xhr) {
+//        $(window).scrollTo($('#comment-container'),500);
+                    clearContent();
+                });
+            }
+
+            function clearContent() {
+                $("[name='content']").val('');
+                $("[name='parentComment.id']").val(-1);
+                $("[name='content']").attr("placeholder", "请输入评论信息...");
+            }
+
+            function reply(obj) {
+                var commentId = $(obj).data('commentid');
+                var commentNickname = $(obj).data('commentnickname');
+                $("[name='content']").attr("placeholder", "@"+commentNickname).focus();
+                $("[name='parentComment.id']").val(commentId);
+                $(window).scrollTo($('#comment-form'),500);
+            }
+
         </script>
     </body>
 </html>
