@@ -3,3 +3,7 @@ spring:
     mode: HTML
   profiles:
     active: dev
+
+
+
+comment.avatar: /images/enno.png
