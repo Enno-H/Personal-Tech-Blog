@@ -480,28 +480,31 @@
                 </div>
                 <div class="ui bottom attached segment">
                     <!--留言区域列表-->
+
                     <div id="comment-container" class="ui teal segment">
                         <div th:fragment="commentList">
                             <div class="ui threaded comments" style="max-width: 100%;">
                                 <h3 class="ui dividing header">Comments</h3>
-                                <div class="comment">
+
+                                <div class="comment" th:each="comment : ${comments}">
                                     <a class="avatar">
-                                        <img src="https://unsplash.it/100/100?image=1005">
+                                        <img src="https://unsplash.it/100/100?image=1005" th:src="@{${comment.avatar}}">
                                     </a>
                                     <div class="content">
-                                        <a class="author">Matt</a>
+                                        <a class="author" th:text="${comment.nickname}">Matt</a>
                                         <div class="metadata">
-                                            <span class="date">Today at 5:42PM</span>
+                                            <span class="date" th:text="${#dates.format(comment.createTime,'yyyy-MM-dd HH:mm')}">Today at 5:42PM</span>
                                         </div>
-                                        <div class="text">
+                                        <div class="text" th:text="${comment.content}">
                                             How artistic!
                                         </div>
                                         <div class="actions">
-                                            <a class="reply" data-commentid="1" data-commentnickname="Matt" onclick="reply(this)">回复</a>
+                                            <a class="reply" data-commentid="1" data-commentnickname="Matt" th:attr="data-commentid=${comment.id}, data-commentnickname=${comment.nickname}" onclick="reply(this)">回复</a>
                                         </div>
                                     </div>
                                 </div>
-                                
+
+                                <!--/*-->
                                 <div class="comment">
                                     <a class="avatar">
                                         <img src="https://unsplash.it/100/100?image=1005">
@@ -555,13 +558,15 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!--*/-->
 
                             </div>
                         </div>
                     </div>
+
                     <div class="ui form">
                         <input type="hidden" name="blog.id" th:value="${blog.id}">
-                        <input type="hidden" name=";parentComment.id" value="-1">
+                        <input type="hidden" name="parentComment.id" value="-1">
                         <div class="field">
                             <textarea name="content" placeholder="请输入评论信息..."></textarea>
                         </div>

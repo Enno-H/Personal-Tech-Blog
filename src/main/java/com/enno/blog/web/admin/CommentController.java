@@ -24,8 +24,8 @@ public class CommentController {
     private String avatar;
 
     @GetMapping("/comments/{blogId}")
-    public String comment(@PathVariable Long blogId, Model model){
-        model.addAttribute("comments",commentService.listCommentByBlogId(blogId));
+    public String comments(@PathVariable Long blogId, Model model) {
+        model.addAttribute("comments", commentService.listCommentByBlogId(blogId));
         return "blog :: commentList";
     }
 
@@ -35,6 +35,6 @@ public class CommentController {
         comment.setBlog(blogService.getBlog(blogId));
         comment.setAvatar(avatar);
         commentService.saveComment(comment);
-        return "redirect:/comment/" + blogId;
+        return "redirect:/comments/" + blogId;
     }
 }
