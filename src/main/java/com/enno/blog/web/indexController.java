@@ -33,24 +33,25 @@ public class indexController {
 
     @GetMapping("/")
     public String index(@PageableDefault(size = 8, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
-                        Model model){
+                        Model model) {
         model.addAttribute("page",blogService.listBlog(pageable));
-        model.addAttribute("types",typeService.listTypeTop(6));
-        model.addAttribute("tags",tagService.listTagTop(10));
-        model.addAttribute("recommendBlogs",blogService.listRecommendBlogTop(8));
+        model.addAttribute("types", typeService.listTypeTop(6));
+        model.addAttribute("tags", tagService.listTagTop(10));
+        model.addAttribute("recommendBlogs", blogService.listRecommendBlogTop(8));
         return "index";
     }
 
     @PostMapping("/search")
     public String search(@PageableDefault(size = 8, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
-                         @RequestParam String query, Model model){
-        model.addAttribute("page",blogService.listBlog("%"+query+"%", pageable));
+                         @RequestParam String query, Model model) {
+        model.addAttribute("page", blogService.listBlog("%"+query+"%", pageable));
         model.addAttribute("query", query);
         return "search";
     }
 
     @GetMapping("/blog/{id}")
-    public String blog(@PathVariable Long id, Model model){
+    public String blog(@PathVariable Long id,Model model) {
         model.addAttribute("blog", blogService.getAndConvert(id));
-        return "blog";}
+        return "blog";
+    }
 }

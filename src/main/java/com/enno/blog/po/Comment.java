@@ -11,10 +11,10 @@ public class Comment {
 
     @Id
     @GeneratedValue
-    private Long Id;
-    private String kickname;
+    private Long id;
+    private String nickname;
     private String email;
-    private String comment;
+    private String content;
     private String avatar;
     @Temporal(TemporalType.TIMESTAMP)
     private Date createTime;
@@ -28,23 +28,25 @@ public class Comment {
     @ManyToOne
     private Comment parentComment;
 
+    private boolean adminComment;
+
     public Comment() {
     }
 
     public Long getId() {
-        return Id;
+        return id;
     }
 
     public void setId(Long id) {
-        Id = id;
+        this.id = id;
     }
 
-    public String getKickname() {
-        return kickname;
+    public String getNickname() {
+        return nickname;
     }
 
-    public void setKickname(String kickname) {
-        this.kickname = kickname;
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
     }
 
     public String getEmail() {
@@ -55,12 +57,12 @@ public class Comment {
         this.email = email;
     }
 
-    public String getComment() {
-        return comment;
+    public String getContent() {
+        return content;
     }
 
-    public void setComment(String comment) {
-        this.comment = comment;
+    public void setContent(String content) {
+        this.content = content;
     }
 
     public String getAvatar() {
@@ -103,15 +105,27 @@ public class Comment {
         this.parentComment = parentComment;
     }
 
+    public boolean isAdminComment() {
+        return adminComment;
+    }
+
+    public void setAdminComment(boolean adminComment) {
+        this.adminComment = adminComment;
+    }
+
     @Override
     public String toString() {
         return "Comment{" +
-                "Id=" + Id +
-                ", kickname='" + kickname + '\'' +
+                "id=" + id +
+                ", nickname='" + nickname + '\'' +
                 ", email='" + email + '\'' +
-                ", comment='" + comment + '\'' +
+                ", content='" + content + '\'' +
                 ", avatar='" + avatar + '\'' +
                 ", createTime=" + createTime +
+                ", blog=" + blog +
+                ", replyComments=" + replyComments +
+                ", parentComment=" + parentComment +
+                ", adminComment=" + adminComment +
                 '}';
     }
 }
