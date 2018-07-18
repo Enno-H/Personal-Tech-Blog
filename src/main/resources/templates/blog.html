@@ -590,8 +590,8 @@
                     </div>
 
                     <div id="comment-form" class="ui form">
-                        <input type="text" name="blog.id" th:value="${blog.id}">
-                        <input type="text" name="parentComment.id" value="-1">
+                        <input type="hidden" name="blog.id" th:value="${blog.id}">
+                        <input type="hidden" name="parentComment.id" value="-1">
                         <div class="field">
                             <textarea name="content" placeholder="请输入评论信息..."></textarea>
                         </div>
