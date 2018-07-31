@@ -53,7 +53,7 @@
                 </div>
 
                 <div class="ui top attached teal segment">
-                    <div class="ui padded vertical segment m-padded-tb-large" th:each="blog : ${page.content}">
+                    <div class="ui m-padded vertical segment m-padded-lr-wide m-padded-tb-large" th:each="blog : ${page.content}">
                         <div class="ui middle aligned mobile reversed stackable grid" >
                             <div class="eleven wide column">
                                 <h3 class="ui header" ><a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="m-black" th:text="${blog.title}">你真的理解什么是财富自由吗?</a></h3>

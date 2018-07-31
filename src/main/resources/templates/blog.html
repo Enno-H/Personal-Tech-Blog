@@ -431,10 +431,15 @@
                         <p><i class="serif">Typo.css</i> 基于 <a href="http://zh.wikipedia.org/wiki/MIT_License">MIT License</a> 开源，使用代码只需说明来源，或者引用 <a
                                 href="http://typo.sofi.sh/license.txt">license.txt</a> 即可。</p>
                     </div>
+
+
+
+                        <!--/*-->
                         <!-- #wrapper -->
                         <a href="https://github.com/sofish/Typo.css" id="fork">
                             <img alt="Fork me on GitHub" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
                         </a>
+                        <!--*/-->
 
 
                         <!--标签-->
@@ -443,26 +448,28 @@
                         </div>
 
                         <!--赞赏-->
-                        <div class="ui center aligned basic segment">
-                            <button id="payButton" class="ui orange basic circular button">赞赏</button>
-                        </div>
-                        <div class="ui payQR flowing popup transition hidden">
-                            <div class="ui orange basic label">
-                                <div class="ui images" style="font-size: inherit !important;">
-                                    <div class="image">
-                                        <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" alt="" class="ui rounded bordered image" style="width: 120px">
-                                        <div>支付宝</div>
-                                    </div>
-                                    <div class="image">
-                                        <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" alt="" class="ui rounded bordered image" style="width: 120px">
-                                        <div>微信</div>
+                        <div th:if="${blog.appreciation}">
+                            <div class="ui center aligned basic segment">
+                                <button id="payButton" class="ui orange basic circular button">赞赏</button>
+                            </div>
+                            <div class="ui payQR flowing popup transition hidden">
+                                <div class="ui orange basic label">
+                                    <div class="ui images" style="font-size: inherit !important;">
+                                        <div class="image">
+                                            <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" alt="" class="ui rounded bordered image" style="width: 120px">
+                                            <div>支付宝</div>
+                                        </div>
+                                        <div class="image">
+                                            <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" alt="" class="ui rounded bordered image" style="width: 120px">
+                                            <div>微信</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="ui attached positive message">
+                <div class="ui attached positive message" th:if="${blog.shareStatement}">
                     <!--博客信息-->
                     <div class="ui middle aligned grid">
                         <div class="eleven wide column">
@@ -478,7 +485,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="ui bottom attached segment">
+                <div class="ui bottom attached segment" th:if="${blog.commentable}">
                     <!--留言区域列表-->
 
                     <div id="comment-container"  class="ui teal segment">
@@ -720,6 +727,9 @@
                 popup : $('.wechat-qr'),
                 position: 'left center'
             });
+
+            var serurl = /*[[#{blog.serurl}]]*/"127.0.0.1:8080";
+            var url = /*[[@{/blog/{id}(id=${blog.id})}]]*/"";
 
             //生成二维码
             var qrcode = new QRCode("qrcode", {
