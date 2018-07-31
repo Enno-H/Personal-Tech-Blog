@@ -9,7 +9,7 @@
     </head>
     <body>
         <!--导航-->
-        <nav th:fragment="menu(5)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small" >
+        <nav th:replace="_fragments :: menu(5)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small" >
             <div class="ui container">
                 <div class="ui inverted secondary stackable menu">
                     <h2 class="ui teal header item">Blog</h2>
@@ -118,8 +118,11 @@
             </div>
         </footer>
 
+
+        <!--/*/<th:block th:replace="_fragments :: script">/*/-->
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+        <!--/*/</th:block>/*/-->
 
         <script>
 
