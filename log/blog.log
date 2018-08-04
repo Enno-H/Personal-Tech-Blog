@@ -1999,3 +1999,71 @@
 2018-08-04 15:54:13.464  INFO 3550 --- [http-nio-8080-exec-4] com.enno.blog.aspect.logAspect           : Result : index
 2018-08-04 15:54:13.729  INFO 3550 --- [http-nio-8080-exec-5] com.enno.blog.aspect.logAspect           : Request : RequestLog{url='/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.enno.blog.web.indexController.newblogs', args=[{}]}
 2018-08-04 15:54:13.734  INFO 3550 --- [http-nio-8080-exec-5] com.enno.blog.aspect.logAspect           : Result : _fragments :: newblogList
+2018-08-04 15:55:15.232  INFO 3550 --- [http-nio-8080-exec-8] com.enno.blog.aspect.logAspect           : Request : RequestLog{url='/', ip='0:0:0:0:0:0:0:1', classMethod='com.enno.blog.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2018-08-04 15:55:15.256  INFO 3550 --- [http-nio-8080-exec-8] com.enno.blog.aspect.logAspect           : Result : index
+2018-08-04 15:55:15.729  INFO 3550 --- [http-nio-8080-exec-9] com.enno.blog.aspect.logAspect           : Request : RequestLog{url='/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.enno.blog.web.indexController.newblogs', args=[{}]}
+2018-08-04 15:55:15.735  INFO 3550 --- [http-nio-8080-exec-9] com.enno.blog.aspect.logAspect           : Result : _fragments :: newblogList
+2018-08-04 15:55:17.428  INFO 3550 --- [http-nio-8080-exec-10] com.enno.blog.aspect.logAspect           : Request : RequestLog{url='/types/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.enno.blog.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2018-08-04 15:55:17.435  INFO 3550 --- [http-nio-8080-exec-10] com.enno.blog.aspect.logAspect           : Result : types
+2018-08-04 15:55:17.723  INFO 3550 --- [http-nio-8080-exec-1] com.enno.blog.aspect.logAspect           : Request : RequestLog{url='/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.enno.blog.web.indexController.newblogs', args=[{}]}
+2018-08-04 15:55:17.728  INFO 3550 --- [http-nio-8080-exec-1] com.enno.blog.aspect.logAspect           : Result : _fragments :: newblogList
+2018-08-04 15:55:18.242  INFO 3550 --- [http-nio-8080-exec-2] com.enno.blog.aspect.logAspect           : Request : RequestLog{url='/tags/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.enno.blog.web.TagShowController.tags', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2018-08-04 15:55:18.251  INFO 3550 --- [http-nio-8080-exec-2] com.enno.blog.aspect.logAspect           : Result : tags
+2018-08-04 15:55:18.517  INFO 3550 --- [http-nio-8080-exec-3] com.enno.blog.aspect.logAspect           : Request : RequestLog{url='/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.enno.blog.web.indexController.newblogs', args=[{}]}
+2018-08-04 15:55:18.524  INFO 3550 --- [http-nio-8080-exec-3] com.enno.blog.aspect.logAspect           : Result : _fragments :: newblogList
+2018-08-04 15:55:18.929  INFO 3550 --- [http-nio-8080-exec-4] com.enno.blog.aspect.logAspect           : Request : RequestLog{url='/archives', ip='0:0:0:0:0:0:0:1', classMethod='com.enno.blog.web.ArchiveShowController.archives', args=[{}]}
+2018-08-04 15:55:18.940  INFO 3550 --- [http-nio-8080-exec-4] com.enno.blog.aspect.logAspect           : Result : archives
+2018-08-04 15:55:19.204  INFO 3550 --- [http-nio-8080-exec-5] com.enno.blog.aspect.logAspect           : Request : RequestLog{url='/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.enno.blog.web.indexController.newblogs', args=[{}]}
+2018-08-04 15:55:19.209  INFO 3550 --- [http-nio-8080-exec-5] com.enno.blog.aspect.logAspect           : Result : _fragments :: newblogList
+2018-08-04 15:55:20.106  INFO 3550 --- [http-nio-8080-exec-6] com.enno.blog.aspect.logAspect           : Request : RequestLog{url='/about', ip='0:0:0:0:0:0:0:1', classMethod='com.enno.blog.web.AboutShowController.about', args=[]}
+2018-08-04 15:55:20.106  INFO 3550 --- [http-nio-8080-exec-6] com.enno.blog.aspect.logAspect           : Result : about
+2018-08-04 15:55:20.346  INFO 3550 --- [http-nio-8080-exec-8] com.enno.blog.aspect.logAspect           : Request : RequestLog{url='/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.enno.blog.web.indexController.newblogs', args=[{}]}
+2018-08-04 15:55:20.351  INFO 3550 --- [http-nio-8080-exec-8] com.enno.blog.aspect.logAspect           : Result : _fragments :: newblogList
+2018-08-04 15:56:54.930  INFO 3550 --- [http-nio-8080-exec-1] com.enno.blog.aspect.logAspect           : Request : RequestLog{url='/about', ip='0:0:0:0:0:0:0:1', classMethod='com.enno.blog.web.AboutShowController.about', args=[]}
+2018-08-04 15:56:54.931  INFO 3550 --- [http-nio-8080-exec-1] com.enno.blog.aspect.logAspect           : Result : about
+2018-08-04 15:56:55.508  INFO 3550 --- [http-nio-8080-exec-3] com.enno.blog.aspect.logAspect           : Request : RequestLog{url='/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.enno.blog.web.indexController.newblogs', args=[{}]}
+2018-08-04 15:56:55.539  INFO 3550 --- [http-nio-8080-exec-3] com.enno.blog.aspect.logAspect           : Result : _fragments :: newblogList
+2018-08-04 16:02:22.354  INFO 3550 --- [http-nio-8080-exec-7] com.enno.blog.aspect.logAspect           : Request : RequestLog{url='/about', ip='0:0:0:0:0:0:0:1', classMethod='com.enno.blog.web.AboutShowController.about', args=[]}
+2018-08-04 16:02:22.357  INFO 3550 --- [http-nio-8080-exec-7] com.enno.blog.aspect.logAspect           : Result : about
+2018-08-04 16:02:23.142  INFO 3550 --- [http-nio-8080-exec-9] com.enno.blog.aspect.logAspect           : Request : RequestLog{url='/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.enno.blog.web.indexController.newblogs', args=[{}]}
+2018-08-04 16:02:23.194  INFO 3550 --- [http-nio-8080-exec-9] com.enno.blog.aspect.logAspect           : Result : _fragments :: newblogList
+2018-08-04 16:02:24.523  INFO 3550 --- [http-nio-8080-exec-1] com.enno.blog.aspect.logAspect           : Request : RequestLog{url='/about', ip='0:0:0:0:0:0:0:1', classMethod='com.enno.blog.web.AboutShowController.about', args=[]}
+2018-08-04 16:02:24.523  INFO 3550 --- [http-nio-8080-exec-1] com.enno.blog.aspect.logAspect           : Result : about
+2018-08-04 16:02:24.765  INFO 3550 --- [http-nio-8080-exec-3] com.enno.blog.aspect.logAspect           : Request : RequestLog{url='/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.enno.blog.web.indexController.newblogs', args=[{}]}
+2018-08-04 16:02:24.771  INFO 3550 --- [http-nio-8080-exec-3] com.enno.blog.aspect.logAspect           : Result : _fragments :: newblogList
+2018-08-04 16:02:34.122  INFO 3550 --- [http-nio-8080-exec-6] com.enno.blog.aspect.logAspect           : Request : RequestLog{url='/archives', ip='0:0:0:0:0:0:0:1', classMethod='com.enno.blog.web.ArchiveShowController.archives', args=[{}]}
+2018-08-04 16:02:34.136  INFO 3550 --- [http-nio-8080-exec-6] com.enno.blog.aspect.logAspect           : Result : archives
+2018-08-04 16:02:34.402  INFO 3550 --- [http-nio-8080-exec-7] com.enno.blog.aspect.logAspect           : Request : RequestLog{url='/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.enno.blog.web.indexController.newblogs', args=[{}]}
+2018-08-04 16:02:34.409  INFO 3550 --- [http-nio-8080-exec-7] com.enno.blog.aspect.logAspect           : Result : _fragments :: newblogList
+2018-08-04 16:02:35.169  INFO 3550 --- [http-nio-8080-exec-8] com.enno.blog.aspect.logAspect           : Request : RequestLog{url='/about', ip='0:0:0:0:0:0:0:1', classMethod='com.enno.blog.web.AboutShowController.about', args=[]}
+2018-08-04 16:02:35.169  INFO 3550 --- [http-nio-8080-exec-8] com.enno.blog.aspect.logAspect           : Result : about
+2018-08-04 16:02:35.448  INFO 3550 --- [http-nio-8080-exec-10] com.enno.blog.aspect.logAspect           : Request : RequestLog{url='/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.enno.blog.web.indexController.newblogs', args=[{}]}
+2018-08-04 16:02:35.455  INFO 3550 --- [http-nio-8080-exec-10] com.enno.blog.aspect.logAspect           : Result : _fragments :: newblogList
+2018-08-04 16:03:10.418  INFO 3550 --- [http-nio-8080-exec-2] com.enno.blog.aspect.logAspect           : Request : RequestLog{url='/about', ip='0:0:0:0:0:0:0:1', classMethod='com.enno.blog.web.AboutShowController.about', args=[]}
+2018-08-04 16:03:10.420  INFO 3550 --- [http-nio-8080-exec-2] com.enno.blog.aspect.logAspect           : Result : about
+2018-08-04 16:03:10.941  INFO 3550 --- [http-nio-8080-exec-4] com.enno.blog.aspect.logAspect           : Request : RequestLog{url='/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.enno.blog.web.indexController.newblogs', args=[{}]}
+2018-08-04 16:03:10.952  INFO 3550 --- [http-nio-8080-exec-4] com.enno.blog.aspect.logAspect           : Result : _fragments :: newblogList
+2018-08-04 16:03:46.626  INFO 3550 --- [http-nio-8080-exec-7] com.enno.blog.aspect.logAspect           : Request : RequestLog{url='/about', ip='0:0:0:0:0:0:0:1', classMethod='com.enno.blog.web.AboutShowController.about', args=[]}
+2018-08-04 16:03:46.627  INFO 3550 --- [http-nio-8080-exec-7] com.enno.blog.aspect.logAspect           : Result : about
+2018-08-04 16:03:47.022  INFO 3550 --- [http-nio-8080-exec-9] com.enno.blog.aspect.logAspect           : Request : RequestLog{url='/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.enno.blog.web.indexController.newblogs', args=[{}]}
+2018-08-04 16:03:47.035  INFO 3550 --- [http-nio-8080-exec-9] com.enno.blog.aspect.logAspect           : Result : _fragments :: newblogList
+2018-08-04 16:05:21.296  INFO 3550 --- [http-nio-8080-exec-4] com.enno.blog.aspect.logAspect           : Request : RequestLog{url='/about', ip='0:0:0:0:0:0:0:1', classMethod='com.enno.blog.web.AboutShowController.about', args=[]}
+2018-08-04 16:05:21.298  INFO 3550 --- [http-nio-8080-exec-4] com.enno.blog.aspect.logAspect           : Result : about
+2018-08-04 16:05:21.791  INFO 3550 --- [http-nio-8080-exec-6] com.enno.blog.aspect.logAspect           : Request : RequestLog{url='/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.enno.blog.web.indexController.newblogs', args=[{}]}
+2018-08-04 16:05:21.823  INFO 3550 --- [http-nio-8080-exec-6] com.enno.blog.aspect.logAspect           : Result : _fragments :: newblogList
+2018-08-04 16:05:43.847  INFO 3550 --- [http-nio-8080-exec-10] com.enno.blog.aspect.logAspect           : Request : RequestLog{url='/about', ip='0:0:0:0:0:0:0:1', classMethod='com.enno.blog.web.AboutShowController.about', args=[]}
+2018-08-04 16:05:43.847  INFO 3550 --- [http-nio-8080-exec-10] com.enno.blog.aspect.logAspect           : Result : about
+2018-08-04 16:05:44.427  INFO 3550 --- [http-nio-8080-exec-2] com.enno.blog.aspect.logAspect           : Request : RequestLog{url='/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.enno.blog.web.indexController.newblogs', args=[{}]}
+2018-08-04 16:05:44.462  INFO 3550 --- [http-nio-8080-exec-2] com.enno.blog.aspect.logAspect           : Result : _fragments :: newblogList
+2018-08-04 16:08:47.170  INFO 3550 --- [http-nio-8080-exec-6] com.enno.blog.aspect.logAspect           : Request : RequestLog{url='/about', ip='0:0:0:0:0:0:0:1', classMethod='com.enno.blog.web.AboutShowController.about', args=[]}
+2018-08-04 16:08:47.172  INFO 3550 --- [http-nio-8080-exec-6] com.enno.blog.aspect.logAspect           : Result : about
+2018-08-04 16:08:47.596  INFO 3550 --- [http-nio-8080-exec-8] com.enno.blog.aspect.logAspect           : Request : RequestLog{url='/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.enno.blog.web.indexController.newblogs', args=[{}]}
+2018-08-04 16:08:47.617  INFO 3550 --- [http-nio-8080-exec-8] com.enno.blog.aspect.logAspect           : Result : _fragments :: newblogList
+2018-08-04 16:08:52.827  INFO 3550 --- [http-nio-8080-exec-10] com.enno.blog.aspect.logAspect           : Request : RequestLog{url='/', ip='0:0:0:0:0:0:0:1', classMethod='com.enno.blog.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2018-08-04 16:08:52.857  INFO 3550 --- [http-nio-8080-exec-10] com.enno.blog.aspect.logAspect           : Result : index
+2018-08-04 16:08:53.131  INFO 3550 --- [http-nio-8080-exec-1] com.enno.blog.aspect.logAspect           : Request : RequestLog{url='/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.enno.blog.web.indexController.newblogs', args=[{}]}
+2018-08-04 16:08:53.141  INFO 3550 --- [http-nio-8080-exec-1] com.enno.blog.aspect.logAspect           : Result : _fragments :: newblogList
+2018-08-04 16:09:05.198  INFO 3550 --- [http-nio-8080-exec-3] com.enno.blog.aspect.logAspect           : Request : RequestLog{url='/types/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.enno.blog.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2018-08-04 16:09:05.206  INFO 3550 --- [http-nio-8080-exec-3] com.enno.blog.aspect.logAspect           : Result : types
+2018-08-04 16:09:05.474  INFO 3550 --- [http-nio-8080-exec-5] com.enno.blog.aspect.logAspect           : Request : RequestLog{url='/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.enno.blog.web.indexController.newblogs', args=[{}]}
+2018-08-04 16:09:05.479  INFO 3550 --- [http-nio-8080-exec-5] com.enno.blog.aspect.logAspect           : Result : _fragments :: newblogList
