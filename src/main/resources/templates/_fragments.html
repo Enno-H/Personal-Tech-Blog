@@ -54,7 +54,7 @@
                 </div>
             </div>
             <div class="three wide column" >
-                <h4 class="ui inverted header m-text-thin m-text-spaced " >最新博客</h4>
+                <h4 class="ui inverted header m-text-thin m-text-spaced" th:text="#{footer.latestBlog}">最新博客</h4>
                 <div id="newblog-container">
                     <div class="ui inverted link list" th:fragment="newblogList">
                         <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="item m-text-thin" th:each="blog : ${newblogs}" th:text="${blog.title}">用户故事（User Story）</a>
@@ -66,19 +66,19 @@
                 </div>
             </div>
             <div class="three wide column">
-                <h4 class="ui inverted header m-text-thin m-text-spaced">联系我</h4>
+                <h4 class="ui inverted header m-text-thin m-text-spaced" th:text="#{footer.contact}">联系我</h4>
                 <div class="ui inverted link list ">
                     <a href="#" class="item" th:text="#{index.email}">hi.xiaolonghuang@gmail.com</a>
                     <a href="#" class="item">Auckland, New Zealand</a>
                 </div>
             </div>
             <div class="seven wide column">
-                <h4 class="ui inverted header m-text-thin m-text-spaced">Blog</h4>
-                <p class="m-text-thin m-text-spaced m-opacity-tiny">这是我的个人博客，我会分享关于编程相关的任何内容，希望可以给来到这里的人一些帮助</p>
+                <h4 class="ui inverted header m-text-thin m-text-spaced">Enno's Blog</h4>
+                <p class="m-text-thin m-text-spaced m-opacity-tiny" th:text="#{footer.describe}">这是我的个人博客，我会分享关于编程的任何内容，希望可以给来到这里的人一些帮助</p>
             </div>
         </div>
         <div class="ui inverted section divider"></div>
-        <p class="m-text-thin m-text-spaced m-opacity-mini">Copyright © 2017-2018 XJBG</p>
+        <p class="m-text-thin m-text-spaced m-opacity-mini">Copyright © 2017-2018 JUST4FUN</p>
     </div>
 </footer>
 

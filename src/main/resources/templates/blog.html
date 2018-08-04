@@ -450,18 +450,18 @@
                         <!--赞赏-->
                         <div th:if="${blog.appreciation}">
                             <div class="ui center aligned basic segment">
-                                <button id="payButton" class="ui orange basic circular button">赞赏</button>
+                                <button id="payButton" class="ui orange basic circular button" th:text="#{content.donation}">赞赏</button>
                             </div>
                             <div class="ui payQR flowing popup transition hidden">
                                 <div class="ui orange basic label">
                                     <div class="ui images" style="font-size: inherit !important;">
                                         <div class="image">
                                             <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" alt="" class="ui rounded bordered image" style="width: 120px">
-                                            <div>支付宝</div>
+                                            <div th:text="#{content.ali}">支付宝</div>
                                         </div>
                                         <div class="image">
                                             <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" alt="" class="ui rounded bordered image" style="width: 120px">
-                                            <div>微信</div>
+                                            <div th:text="#{content.wechat}">微信</div>
                                         </div>
                                     </div>
                                 </div>
@@ -491,7 +491,7 @@
                     <div id="comment-container"  class="ui teal segment">
                         <div th:fragment="commentList">
                             <div class="ui threaded comments" style="max-width: 100%;">
-                                <h3 class="ui dividing header">评论</h3>
+                                <h3 class="ui dividing header" th:text="#{comment.title}">评论1</h3>
                                 <div class="comment" th:each="comment : ${comments}">
                                     <a class="avatar">
                                         <img src="https://unsplash.it/100/100?image=1005" th:src="@{${comment.avatar}}">
@@ -499,7 +499,7 @@
                                     <div class="content">
                                         <a class="author" >
                                             <span th:text="${comment.nickname}">Matt</span>
-                                            <div class="ui mini basic teal left pointing label m-padded-mini" th:if="${comment.adminComment}">博主</div>
+                                            <div class="ui mini basic teal left pointing label m-padded-mini" th:if="${comment.adminComment}" th:text="#{comment.blogger}">博主1</div>
                                         </a>
                                         <div class="metadata">
                                             <span class="date" th:text="${#dates.format(comment.createTime,'yyyy-MM-dd HH:mm')}">Today at 5:42PM</span>
@@ -508,7 +508,7 @@
                                             How artistic!
                                         </div>
                                         <div class="actions">
-                                            <a class="reply" data-commentid="1" data-commentnickname="Matt" th:attr="data-commentid=${comment.id},data-commentnickname=${comment.nickname}" onclick="reply(this)">回复</a>
+                                            <a class="reply" data-commentid="1" data-commentnickname="Matt" th:attr="data-commentid=${comment.id},data-commentnickname=${comment.nickname}" onclick="reply(this)" th:text="#{comment.reply}">回复</a>
                                         </div>
                                     </div>
                                     <div class="comments" th:if="${#arrays.length(comment.replyComments)}>0">
@@ -519,7 +519,7 @@
                                             <div class="content">
                                                 <a class="author" >
                                                     <span th:text="${reply.nickname}">小红</span>
-                                                    <div class="ui mini basic teal left pointing label m-padded-mini" th:if="${reply.adminComment}">博主</div>
+                                                    <div class="ui mini basic teal left pointing label m-padded-mini" th:if="${reply.adminComment}" th:text="#{comment.blogger}">博主</div>
                                                     &nbsp;<span th:text="|@ ${reply.parentComment.nickname}|" class="m-teal">@ 小白</span>
                                                 </a>
                                                 <div class="metadata">
@@ -529,7 +529,7 @@
                                                     How artistic!
                                                 </div>
                                                 <div class="actions">
-                                                    <a class="reply" data-commentid="1" data-commentnickname="Matt" th:attr="data-commentid=${reply.id},data-commentnickname=${reply.nickname}" onclick="reply(this)">回复</a>
+                                                    <a class="reply" data-commentid="1" data-commentnickname="Matt" th:attr="data-commentid=${reply.id},data-commentnickname=${reply.nickname}" onclick="reply(this)" th:text="#{comment.reply}">回复</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -600,23 +600,23 @@
                         <input type="hidden" name="blog.id" th:value="${blog.id}">
                         <input type="hidden" name="parentComment.id" value="-1">
                         <div class="field">
-                            <textarea name="content" placeholder="请输入评论信息..."></textarea>
+                            <textarea name="content" placeholder="Please enter your comment..."></textarea>
                         </div>
                         <div class="fields">
                             <div class="field m-mobile-wide m-margin-bottom-small">
                                 <div class="ui left icon input">
                                     <i class="user icon"></i>
-                                    <input type="text" name="nickname" placeholder="姓名" th:value="${session.user}!=null ? ${session.user.nickname}">
+                                    <input type="text" name="nickname" placeholder="Name" th:value="${session.user}!=null ? ${session.user.nickname}">
                                 </div>
                             </div>
                             <div class="field m-mobile-wide m-margin-bottom-small">
                                 <div class="ui left icon input">
                                     <i class="mail icon"></i>
-                                    <input type="text" name="email" placeholder="邮箱" th:value="${session.user}!=null ? ${session.user.email}">
+                                    <input type="text" name="email" placeholder="Email" th:value="${session.user}!=null ? ${session.user.email}">
                                 </div>
                             </div>
                             <div class="field  m-margin-bottom-small m-mobile-wide">
-                                <button id="commentpost-btn" type="button" class="ui teal button m-mobile-wide"><i class="edit icon"></i>发布</button>
+                                <button id="commentpost-btn" type="button" class="ui teal button m-mobile-wide" th:text="#{comment.submit}"><i class="edit icon"></i>发布</button>
                             </div>
                         </div>
                     </div>
@@ -626,8 +626,8 @@
 
         <div id="toolbar" class="m-padded m-fixed m-right-bottom" style="display: none">
             <div class="ui vertical icon buttons ">
-                <button type="button" class="ui toc teal button" >目录</button>
-                <a href="#comment-container" class="ui teal button" >留言</a>
+                <button type="button" class="ui toc teal button" th:text="#{side.catalogue}">目录</button>
+                <a href="#comment-container" class="ui teal button" th:text="#{side.comment}">留言</a>
                 <button class="ui wechat icon button"><i class="weixin icon"></i></button>
                 <div id="toTop-button" class="ui icon button" ><i class="chevron up icon"></i></div>
             </div>
@@ -765,7 +765,7 @@
                         identifier: 'content',
                         rules: [{
                             type: 'empty',
-                            prompt: '请输入评论内容'
+                            prompt: 'Please enter a comment'
                         }
                         ]
                     },
@@ -773,14 +773,14 @@
                         identifier: 'nickname',
                         rules: [{
                             type: 'empty',
-                            prompt: '请输入你的名称'
+                            prompt: 'Please enter your nickname'
                         }]
                     },
                     type: {
                         identifier: 'email',
                         rules: [{
                             type: 'email',
-                            prompt: '请填写正确的邮箱地址'
+                            prompt: 'Please fill in the correct email address'
                         }]
                     }
                 }
@@ -794,10 +794,10 @@
             $('#commentpost-btn').click(function () {
                 var boo = $('.ui.form').form('validate form');
                 if (boo) {
-                    console.log('校验成功');
+                    console.log('Verification succeeded');
                     postData();
                 } else {
-                    console.log('校验失败');
+                    console.log('Verification failed');
                 }
             });
 
@@ -816,7 +816,7 @@
             function clearContent() {
                 $("[name='content']").val('');
                 $("[name='parentComment.id']").val(-1);
-                $("[name='content']").attr("placeholder", "请输入评论信息...");
+                $("[name='content']").attr("placeholder", "Please enter a comment...");
             }
 
             function reply(obj) {

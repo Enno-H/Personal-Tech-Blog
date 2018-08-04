@@ -44,10 +44,10 @@
                         <div class="segment top attached ui">
                             <div class="ui middle aligned two column grid">
                                 <div class="column">
-                                    <h3 class="ui teal header">博客</h3>
+                                    <h3 class="ui teal header" th:text="#{index.blogtitle}">博客</h3>
                                 </div>
                                 <div class="right aligned column">
-                                    共 <h2 class="ui header orange m-inline-block m-text-thin" th:text="${page.totalElements}">14</h2> 篇
+                                    <div class="item ui header orange m-inline-block m-text-thin" th:text="${page.totalElements}">14</div>  Articles
                                 </div>
                             </div>
                         </div>
@@ -194,7 +194,7 @@
                             <div class="ui secondary segment">
                                 <div class="ui two column grid">
                                     <div class="column">
-                                        <i class="idea icon"></i>分类
+                                        <i class="idea icon"></i><span th:text="#{side.type}">分类</span>
                                     </div>
                                     <div class="right aligned column">
                                         <a href="#" th:href="@{types/-1}" target="_blank">more <i class="angle double right icon"></i></a>
@@ -242,7 +242,7 @@
                             <div class="ui secondary segment">
                                 <div class="ui two column grid">
                                     <div class="column">
-                                        <i class="tags icon"></i>标签
+                                        <i class="tags icon"></i><span th:text="#{side.tag}">标签</span>
                                     </div>
                                     <div class="right aligned column">
                                         <a href="#" th:href="@{tags/-1}" target="_blank">more <i class="angle double right icon"></i></a>
@@ -260,7 +260,7 @@
                         <div class="ui segments m-margin-top-large">
                             <div class="ui secondary segment ">
                                 <div class="column">
-                                    <i class="bookmark icon"></i>最新推荐
+                                    <i class="bookmark icon"></i><span th:text="#{side.recommend}">推荐</span>
                                 </div>
                             </div>
                             <div class="ui segment" th:each="blog : ${recommendBlogs}">
@@ -289,7 +289,7 @@
                         </div>
 
                         <!--二维码-->
-                        <h4 class="ui horizontal divider header">扫码关注我</h4>
+                        <h4 class="ui horizontal divider header" th:text="#{side.follow}">扫码关注我1</h4>
                         <div class="ui card centered" style="width: 10em">
                             <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" alt="" class="ui rounded image">
                         </div>
