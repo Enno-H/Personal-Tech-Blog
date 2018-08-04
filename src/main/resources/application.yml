@@ -7,3 +7,5 @@ spring:
 
 
 comment.avatar: /images/avatar.png
+server:
+  port: 5000
