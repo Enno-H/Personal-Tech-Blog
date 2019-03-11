@@ -3,7 +3,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/blog?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
-    password: 123456
+    password: 1109
   jpa:
     hibernate:
       ddl-auto: update
