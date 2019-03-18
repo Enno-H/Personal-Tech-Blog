@@ -31,12 +31,14 @@ pipeline {
             parallel{
                 stage ('Deploy to Staging'){
                     steps {
+                        sh "mv /Users/Shared/Jenkins/Home/workspace/blog/target/*.war /Users/Shared/Jenkins/Home/workspace/blog/target/ROOT.war"
                         sh "scp -o StrictHostKeyChecking=no -i /Users/ennoh/tomcat-demo.pem /Users/Shared/Jenkins/Home/workspace/blog/target/*.war ec2-user@${params.tomcat_dev}:/var/lib/tomcat8/webapps"
                     }
                 }
 
                 stage ('Deploy to Production'){
                     steps {
+                        sh "mv /Users/Shared/Jenkins/Home/workspace/blog/target/*.war /Users/Shared/Jenkins/Home/workspace/blog/target/ROOT.war"
                         sh "scp -o StrictHostKeyChecking=no -i /Users/ennoh/tomcat-demo.pem /Users/Shared/Jenkins/Home/workspace/blog/target/*.war ec2-user@${params.tomcat_prod}:/var/lib/tomcat8/webapps"
                     }
                 }
