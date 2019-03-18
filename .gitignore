@@ -24,3 +24,4 @@
 /nbdist/
 /.nb-gradle/
 log/*
+log/blog.log
