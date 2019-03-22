@@ -6,7 +6,6 @@ pipeline {
     }
 
     parameters{
-        string(name: 'tomcat_dev', defaultValue: '13.55.1.23', description: 'Staging Server')
         string(name: 'tomcat_prod', defaultValue: '54.206.114.44', description: 'Production Server')
     }
 
@@ -29,13 +28,6 @@ pipeline {
 
     stage ('Deployments'){
             parallel{
-                stage ('Deploy to Staging'){
-                    steps {
-                        sh "mv /Users/Shared/Jenkins/Home/workspace/blog/target/*.war /Users/Shared/Jenkins/Home/workspace/blog/target/ROOT.war"
-                        sh "scp -o StrictHostKeyChecking=no -i /Users/ennoh/tomcat-demo.pem /Users/Shared/Jenkins/Home/workspace/blog/target/*.war ec2-user@${params.tomcat_dev}:/var/lib/tomcat8/webapps"
-                    }
-                }
-
                 stage ('Deploy to Production'){
                     steps {
                         sh "mv /Users/Shared/Jenkins/Home/workspace/blog/target/*.war /Users/Shared/Jenkins/Home/workspace/blog/target/ROOT.war"
