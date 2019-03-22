@@ -1,8 +1,8 @@
-package com.enno.blog.web;
+package com.enno.blog.controller;
 
-import com.enno.blog.po.Tag;
+import com.enno.blog.po.Type;
 import com.enno.blog.service.BlogService;
-import com.enno.blog.service.TagService;
+import com.enno.blog.service.TypeService;
 import com.enno.blog.vo.BlogQuery;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
@@ -16,25 +16,27 @@ import org.springframework.web.bind.annotation.PathVariable;
 import java.util.List;
 
 @Controller
-public class TagShowController {
+public class TypeShowController {
 
     @Autowired
-    private TagService tagService;
+    private TypeService typeService;
 
     @Autowired
     private BlogService blogService;
 
-    @GetMapping("/tags/{id}")
-    public String tags(@PageableDefault(size = 8, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
+    @GetMapping("/types/{id}")
+    public String types(@PageableDefault(size = 8, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
                         @PathVariable Long id, Model model){
 
-        List<Tag> tags = tagService.listTagTop(10000);
+        List<Type> types = typeService.listTypeTop(10000);
         if(id == -1){
-            id = tags.get(0).getId();
+            id = types.get(0).getId();
         }
-        model.addAttribute("tags",tags);
-        model.addAttribute("page",blogService.listBlog(id, pageable));
-        model.addAttribute("activeTagId",id);
-        return "tags";
+        BlogQuery blogQuery = new BlogQuery();
+        blogQuery.setTypeId(id);
+        model.addAttribute("types",types);
+        model.addAttribute("page",blogService.listBlog(pageable,blogQuery));
+        model.addAttribute("activeTypeId",id);
+        return "types";
     }
 }

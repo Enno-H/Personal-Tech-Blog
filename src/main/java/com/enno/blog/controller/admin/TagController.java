@@ -1,4 +1,4 @@
-package com.enno.blog.web.admin;
+package com.enno.blog.controller.admin;
 
 import com.enno.blog.po.Tag;
 import com.enno.blog.service.TagService;

@@ -1,12 +1,9 @@
-package com.enno.blog.web;
+package com.enno.blog.controller;
 
-import com.enno.blog.NotFoundException;
 import com.enno.blog.service.BlogService;
 import com.enno.blog.service.TagService;
 import com.enno.blog.service.TypeService;
-import com.enno.blog.vo.BlogQuery;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;

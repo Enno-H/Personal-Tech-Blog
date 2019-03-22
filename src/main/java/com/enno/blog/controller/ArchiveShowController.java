@@ -1,4 +1,4 @@
-package com.enno.blog.web;
+package com.enno.blog.controller;
 
 import com.enno.blog.service.BlogService;
 import org.springframework.beans.factory.annotation.Autowired;
