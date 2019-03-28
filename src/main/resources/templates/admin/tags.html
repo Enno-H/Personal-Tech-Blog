@@ -48,15 +48,15 @@
             <div class="ui container">
                 <div class="ui success message" th:unless="${#strings.isEmpty(message)}">
                     <i class="close icon"></i>
-                    <div class="header">提示：</div>
-                    <p th:text="${message}">恭喜，操作成功！</p>
+                    <div class="header">Note:</div>
+                    <p th:text="${message}">Congratulations, the operation is successful!</p>
                 </div>
                 <table class="ui celled compact teal table">
                     <thead>
                     <tr>
                         <th></th>
-                        <th>标签名称</th>
-                        <th>操作</th>
+                        <th>Tag Name</th>
+                        <th>Operation</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -64,8 +64,8 @@
                         <td th:text="${iterStat.count}">1</td>
                         <td th:text="${tag.name}">刻意练习清单</td>
                         <td>
-                            <a href="#" th:href="@{/admin/tags/{id}/input(id=${tag.id})}" class="ui mini teal basic button">编辑</a>
-                            <a href="#" th:href="@{/admin/tags/{id}/delete(id=${tag.id})}" class="ui mini red basic button">删除</a>
+                            <a href="#" th:href="@{/admin/tags/{id}/input(id=${tag.id})}" class="ui mini teal basic button">Edit</a>
+                            <a href="#" th:href="@{/admin/tags/{id}/delete(id=${tag.id})}" class="ui mini red basic button">Delete</a>
                         </td>
                     </tr>
                     </tbody>
@@ -73,10 +73,10 @@
                     <tr>
                         <th colspan="6">
                             <div class="ui mini pagination menu" th:if="${page.totalPages}>1">
-                                <a th:href="@{/admin/tags(page=${page.number}-1)}" class="  item" th:unless="${page.first}">上一页</a>
-                                <a th:href="@{/admin/tags(page=${page.number}+1)}" class=" item" th:unless="${page.last}">下一页</a>
+                                <a th:href="@{/admin/tags(page=${page.number}-1)}" class="  item" th:unless="${page.first}">Last Page</a>
+                                <a th:href="@{/admin/tags(page=${page.number}+1)}" class=" item" th:unless="${page.last}">Next Page</a>
                             </div>
-                            <a href="#" th:href="@{/admin/tags/input}" class="ui mini right floated teal basic button">新增</a>
+                            <a href="#" th:href="@{/admin/tags/input}" class="ui mini right floated teal basic button">Add new tag</a>
                         </th>
                     </tr>
                     </tfoot>

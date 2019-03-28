@@ -3,7 +3,7 @@
     <head th:replace="admin/_fragments :: head(~{::title})">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>博客管理</title>
+        <title>Admin Console</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.1/dist/semantic.min.css">
         <link rel="stylesheet" href="../../static/css/me.css">
     </head>
@@ -12,10 +12,10 @@
         <nav th:replace="admin/_fragments :: menu(1)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small" >
             <div class="ui container">
                 <div class="ui inverted secondary stackable menu">
-                    <h2 class="ui teal header item">管理后台</h2>
-                    <a href="#" class="active m-item item m-mobile-hide"><i class="mini home icon"></i>博客</a>
-                    <a href="#" class="m-item item m-mobile-hide"><i class="mini idea icon"></i>分类</a>
-                    <a href="#" class="m-item item m-mobile-hide"><i class="mini tags icon"></i>标签</a>
+                    <h2 class="ui teal header item">Admin Console</h2>
+                    <a href="#" class="active m-item item m-mobile-hide"><i class="mini home icon"></i>Blogs</a>
+                    <a href="#" class="m-item item m-mobile-hide"><i class="mini idea icon"></i>Types</a>
+                    <a href="#" class="m-item item m-mobile-hide"><i class="mini tags icon"></i>Tags</a>
                     <div class="right m-item menu m-mobile-hide">
                         <div class="ui dropdown item">
                             <div class="text">
@@ -24,7 +24,7 @@
                             </div>
                             <i class="dropdown icon"></i>
                             <div class="menu">
-                                <a href="#" class="item">注销</a>
+                                <a href="#" class="item">Log out</a>
                             </div>
                         </div>
                     </div>
@@ -37,8 +37,8 @@
         <div class="ui attached pointing menu">
             <div class="ui container">
                 <div class="right menu">
-                    <a href="#" th:href="@{/admin/blogs/input}" class=" item">发布</a>
-                    <a href="#" th:href="@{/admin/blogs}" class="teal active item">列表</a>
+                    <a href="#" th:href="@{/admin/blogs/input}" class=" item">Publish</a>
+                    <a href="#" th:href="@{/admin/blogs}" class="teal active item">List</a>
                 </div>
             </div>
         </div>
@@ -51,14 +51,14 @@
                     <input type="hidden" name="page">
                     <div class="inline fields">
                         <div class="field">
-                            <input type="text" name="title" placeholder="标题">
+                            <input type="text" name="title" placeholder="Title">
                         </div>
                         <div class="field">
                             <div class="ui labeled action input">
                                 <div class="ui type selection dropdown">
                                     <input type="hidden" name="typeId">
                                     <i class="dropdown icon"></i>
-                                    <div class="default text">分类</div>
+                                    <div class="default text">Type</div>
                                     <div class="menu">
                                         <div th:each="type : ${types}" class="item" data-value="1" th:data-value="${type.id}" th:text="${type.name}">错误日志</div>
                                         <!--/*-->
@@ -75,11 +75,11 @@
                         <div class="field">
                             <div class="ui checkbox">
                                 <input type="checkbox" id="recommend" name="recommend">
-                                <label for="recommend">推荐</label>
+                                <label for="recommend">Recommend</label>
                             </div>
                         </div>
                         <div class="field">
-                            <button type="button" id="search-btn" class="ui mini teal basic button"><i class="search icon"></i>搜索</button>
+                            <button type="button" id="search-btn" class="ui mini teal basic button"><i class="search icon"></i>Search</button>
                         </div>
                     </div>
                 </div>
@@ -89,12 +89,12 @@
                         <thead>
                         <tr>
                             <th></th>
-                            <th>标题</th>
-                            <th>类型</th>
-                            <th>推荐</th>
-                            <th>发布状态</th>
-                            <th>更新时间</th>
-                            <th>操作</th>
+                            <th>Title</th>
+                            <th>Type</th>
+                            <th>Recommendation</th>
+                            <th>Status</th>
+                            <th>Update Time</th>
+                            <th>Operation</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -102,12 +102,12 @@
                             <td th:text="${iterStat.count}">1</td>
                             <td th:text="${blog.title}">刻意练习清单</td>
                             <td th:text="${blog.type.name}">认知升级</td>
-                            <td th:text="${blog.recommend} ? '是' : '否'">是</td>
-                            <td th:text="${blog.published} ? '发布' : '草稿'">草稿</td>
+                            <td th:text="${blog.recommend} ? 'Yes' : 'No'">Yes</td>
+                            <td th:text="${blog.published} ? 'Published' : 'Draft'">Draft</td>
                             <td th:text="${blog.updateTime}">2017-10-02 09:45</td>
                             <td>
-                                <a href="#" th:href="@{/admin/blogs/{id}/input(id=${blog.id})}" class="ui mini teal basic button">编辑</a>
-                                <a href="#" th:href="@{/admin/blogs/{id}/delete(id=${blog.id})}" class="ui mini red basic button">删除</a>
+                                <a href="#" th:href="@{/admin/blogs/{id}/input(id=${blog.id})}" class="ui mini teal basic button">Edit</a>
+                                <a href="#" th:href="@{/admin/blogs/{id}/delete(id=${blog.id})}" class="ui mini red basic button">Delete</a>
                             </td>
                         </tr>
                         </tbody>
@@ -115,10 +115,10 @@
                         <tr>
                             <th colspan="7">
                                 <div class="ui mini pagination menu" th:if="${page.totalPages}>1">
-                                    <a onclick="page(this)" th:attr="data-page=${page.number}-1" class=" item" th:unless="${page.first}">上一页</a>
-                                    <a onclick="page(this)" th:attr="data-page=${page.number}+1" class=" item" th:unless="${page.last}">下一页</a>
+                                    <a onclick="page(this)" th:attr="data-page=${page.number}-1" class=" item" th:unless="${page.first}">Last Page</a>
+                                    <a onclick="page(this)" th:attr="data-page=${page.number}+1" class=" item" th:unless="${page.last}">Next Page</a>
                                 </div>
-                                <a href="#" th:href="@{/admin/blogs/input}" class="ui mini right floated teal basic button">新增</a>
+                                <a href="#" th:href="@{/admin/blogs/input}" class="ui mini right floated teal basic button">Add new blog</a>
                             </th>
                         </tr>
                         </tfoot>
@@ -126,8 +126,8 @@
 
                     <div class="ui success message" th:unless="${#strings.isEmpty(message)}">
                         <i class="close icon"></i>
-                        <div class="header">提示：</div>
-                        <p th:text="${message}">恭喜，操作成功！</p>
+                        <div class="header">Note：</div>
+                        <p th:text="${message}">Congratulations, the operation is successful!</p>
                     </div>
 
                 </div>

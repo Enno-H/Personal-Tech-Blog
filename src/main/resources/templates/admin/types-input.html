@@ -39,8 +39,8 @@
 <div class="ui attached pointing menu">
     <div class="ui container">
         <div class="right menu">
-            <a href="#" th:href="@{/admin/types/input}" class="active item">新增</a>
-            <a href="#" th:href="@{/admin/types}" class="teal  item">列表</a>
+            <a href="#" th:href="@{/admin/types/input}" class="active item">Add</a>
+            <a href="#" th:href="@{/admin/types}" class="teal  item">List</a>
         </div>
     </div>
 </div>
@@ -60,8 +60,8 @@
             <input type="hidden" name="id" th:value="*{id}">
             <div class=" field">
                 <div class="ui left labeled input">
-                    <label class="ui teal basic label">名称</label>
-                    <input type="text" name="name" placeholder="分类名称" th:value="*{name}" >
+                    <label class="ui teal basic label">Name</label>
+                    <input type="text" name="name" placeholder="Type Name" th:value="*{name}" >
                 </div>
             </div>
 
@@ -74,8 +74,8 @@
             </div>
              /*/-->
             <div class="ui right aligned container">
-                <button type="button" class="ui button" onclick="window.history.go(-1)" >返回</button>
-                <button class="ui teal submit button">提交</button>
+                <button type="button" class="ui button" onclick="window.history.go(-1)" >Back</button>
+                <button class="ui teal submit button">Submit</button>
             </div>
 
         </form>
