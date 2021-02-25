@@ -6,19 +6,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "t_type")
+@Table(name = "TABLE_TYPE")
 public class Type {
 
     @Id
     @GeneratedValue
     private Long id;
-    //后端校验
-    @NotBlank(message = "分类名称不能为空")
+
+    @NotBlank(message = "Type cannot be empty.")
     private String name;
 
     @OneToMany(mappedBy = "type")
     private List<Blog> blogs = new ArrayList<>();
-
 
     public Type() {
     }

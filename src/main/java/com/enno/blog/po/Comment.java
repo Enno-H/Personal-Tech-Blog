@@ -6,16 +6,21 @@ import java.util.Date;
 import java.util.List;
 
 @Entity
-@Table(name = "t_comment")
+@Table(name = "TABLE_COMMENT")
 public class Comment {
 
     @Id
     @GeneratedValue
     private Long id;
+
     private String nickname;
+
     private String email;
+
     private String content;
+
     private String avatar;
+
     @Temporal(TemporalType.TIMESTAMP)
     private Date createTime;
 

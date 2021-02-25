@@ -6,20 +6,28 @@ import java.util.Date;
 import java.util.List;
 
 @Entity
-@Table(name = "t_user")
+@Table(name = "TABLE_USER")
 public class User {
 
     @Id
     @GeneratedValue
     private Long Id;
+
     private String avatar;
+
     private String nickname;
+
     private String username;
+
     private String password;
+
     private String email;
+
     private Integer type;
+
     @Temporal(TemporalType.TIMESTAMP)
     private Date createTime;
+
     @Temporal(TemporalType.TIMESTAMP)
     private Date updateTime;
 
