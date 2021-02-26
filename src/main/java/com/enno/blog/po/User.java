@@ -37,6 +37,15 @@ public class User {
     public User() {
     }
 
+    public User(String username, String password, String email, Integer type, String avatar, String nickname) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.type = type;
+        this.avatar = avatar;
+        this.nickname = nickname;
+    }
+
     public Long getId() {
         return Id;
     }
