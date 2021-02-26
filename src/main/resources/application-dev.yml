@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://blogdb.cucjtddcszeb.ap-southeast-2.rds.amazonaws.com:3306/blogDB
+    url: jdbc:mysql://localhost:3306/blogDB?useSSL=false
     username: root
-    password: 12345678
+    password: root
   jpa:
     hibernate:
       ddl-auto: update

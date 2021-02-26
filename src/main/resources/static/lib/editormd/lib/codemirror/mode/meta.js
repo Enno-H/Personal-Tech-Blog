@@ -29,7 +29,7 @@
     {name: "Dart", mimes: ["application/dart", "text/x-dart"], mode: "dart", ext: ["dart"]},
     {name: "diff", mime: "text/x-diff", mode: "diff", ext: ["diff", "patch"]},
     {name: "Django", mime: "text/x-django", mode: "django"},
-    {name: "Dockerfile", mime: "text/x-dockerfile", mode: "dockerfile", file: /^Dockerfile$/},
+    {name: "docker-compose.yml", mime: "text/x-dockerfile", mode: "dockerfile", file: /^Dockerfile$/},
     {name: "DTD", mime: "application/xml-dtd", mode: "dtd", ext: ["dtd"]},
     {name: "Dylan", mime: "text/x-dylan", mode: "dylan", ext: ["dylan", "dyl", "intr"]},
     {name: "EBNF", mime: "text/x-ebnf", mode: "ebnf"},

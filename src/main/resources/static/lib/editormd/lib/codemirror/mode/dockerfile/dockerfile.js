@@ -11,7 +11,7 @@
 })(function(CodeMirror) {
   "use strict";
 
-  // Collect all Dockerfile directives
+  // Collect all docker-compose.yml directives
   var instructions = ["from", "maintainer", "run", "cmd", "expose", "env",
                       "add", "copy", "entrypoint", "volume", "user",
                       "workdir", "onbuild"],
