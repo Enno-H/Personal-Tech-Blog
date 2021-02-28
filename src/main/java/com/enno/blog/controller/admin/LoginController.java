@@ -2,7 +2,6 @@ package com.enno.blog.controller.admin;
 
 import com.enno.blog.po.User;
 import com.enno.blog.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,9 +15,11 @@ import javax.servlet.http.HttpSession;
 @RequestMapping("/admin")
 public class LoginController {
 
+    private final UserService userService;
 
-    @Autowired
-    private UserService userService;
+    public LoginController(UserService userService) {
+        this.userService = userService;
+    }
 
     @GetMapping
     public String loginPage() {
