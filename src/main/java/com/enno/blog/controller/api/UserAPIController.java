@@ -5,6 +5,8 @@ import com.enno.blog.handler.UserNotFoundException;
 import com.enno.blog.po.User;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
+import org.springframework.hateoas.IanaLinkRelations;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -42,8 +44,14 @@ public class UserAPIController {
     // end::get-aggregate-root[]
 
     @PostMapping("/users")
-    public User newUser(@RequestBody User newUser) {
-        return repository.save(newUser);
+    public ResponseEntity<EntityModel<User>> newUser(@RequestBody User newUser) {
+
+//        return repository.save(newUser);
+        EntityModel<User> entityModel = assembler.toModel(repository.save(newUser));
+
+        return ResponseEntity //
+                .created(entityModel.getRequiredLink(IanaLinkRelations.SELF).toUri()) //
+                .body(entityModel);
     }
 
     // Single item
@@ -62,27 +70,34 @@ public class UserAPIController {
     // end::get-single-item[]
 
     @PutMapping("/users/{id}")
-    public User replaceUser(@RequestBody User newUser, @PathVariable Long id) {
+    public ResponseEntity<EntityModel<User>> replaceUser(@RequestBody User newUser, @PathVariable Long id) {
 
-        return repository.findById(id)
-                .map(User -> {
-                    User.setUsername(newUser.getUsername());
-                    User.setEmail(newUser.getEmail());
-                    User.setType(newUser.getType());
-                    User.setAvatar(newUser.getAvatar());
-                    User.setNickname(newUser.getNickname());
-                    return repository.save(User);
+        User updatedUser = repository.findById(id)
+                .map(user -> {
+                    user.setUsername(newUser.getUsername());
+                    user.setEmail(newUser.getEmail());
+                    user.setType(newUser.getType());
+                    user.setAvatar(newUser.getAvatar());
+                    user.setNickname(newUser.getNickname());
+                    return repository.save(user);
                 })
                 .orElseGet(() -> {
                     newUser.setId(id);
                     return repository.save(newUser);
                 });
+
+        EntityModel<User> entityModel = assembler.toModel(updatedUser);
+        return ResponseEntity //
+                .created(entityModel.getRequiredLink(IanaLinkRelations.SELF).toUri()) //
+                .body(entityModel);
     }
 
     @DeleteMapping("/users/{id}")
-    public void deleteUser(@PathVariable Long id) {
+    public ResponseEntity<?> deleteUser(@PathVariable Long id) {
 
         repository.deleteById(id);
+
+        return ResponseEntity.noContent().build();
     }
 
 }
