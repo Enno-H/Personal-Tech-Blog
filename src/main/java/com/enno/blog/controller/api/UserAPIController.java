@@ -1,4 +1,5 @@
 package com.enno.blog.controller.api;
+import com.enno.blog.assembler.UserModelAssembler;
 import com.enno.blog.dao.UserRepository;
 import com.enno.blog.handler.UserNotFoundException;
 import com.enno.blog.po.User;
@@ -15,47 +16,53 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 public class UserAPIController {
 
     private final UserRepository repository;
+    private final UserModelAssembler assembler;
 
-    UserAPIController(UserRepository repository) {
+    UserAPIController(UserRepository repository, UserModelAssembler assembler) {
         this.repository = repository;
+        this.assembler = assembler;
     }
 
     // Aggregate root
     // tag::get-aggregate-root[]
     @GetMapping("/users")
-    CollectionModel<EntityModel<User>> all() {
+    public CollectionModel<EntityModel<User>> all() {
 
-        List<EntityModel<User>> Users = repository.findAll().stream()
-                .map(User -> EntityModel.of(User,
-                        linkTo(methodOn(UserAPIController.class).one(User.getId())).withSelfRel(),
-                        linkTo(methodOn(UserAPIController.class).all()).withRel("users")))
+//        List<EntityModel<User>> users = repository.findAll().stream()
+//                .map(User -> EntityModel.of(User,
+//                        linkTo(methodOn(UserAPIController.class).one(User.getId())).withSelfRel(),
+//                        linkTo(methodOn(UserAPIController.class).all()).withRel("users")))
+//                .collect(Collectors.toList());
+        List<EntityModel<User>> users = repository.findAll().stream() //
+                .map(assembler::toModel) //
                 .collect(Collectors.toList());
 
-        return CollectionModel.of(Users, linkTo(methodOn(UserAPIController.class).all()).withSelfRel());
+        return CollectionModel.of(users, linkTo(methodOn(UserAPIController.class).all()).withSelfRel());
     }
     // end::get-aggregate-root[]
 
     @PostMapping("/users")
-    User newUser(@RequestBody User newUser) {
+    public User newUser(@RequestBody User newUser) {
         return repository.save(newUser);
     }
 
     // Single item
     // tag::get-single-item[]
     @GetMapping("/user/{id}")
-    EntityModel<User> one(@PathVariable Long id) {
+    public EntityModel<User> one(@PathVariable Long id) {
 
-        User User = repository.findById(id) //
+        User user = repository.findById(id) //
                 .orElseThrow(() -> new UserNotFoundException(id));
 
-        return EntityModel.of(User, //
-                linkTo(methodOn(UserAPIController.class).one(id)).withSelfRel(),
-                linkTo(methodOn(UserAPIController.class).all()).withRel("users"));
+//        return EntityModel.of(user, //
+//                linkTo(methodOn(UserAPIController.class).one(id)).withSelfRel(),
+//                linkTo(methodOn(UserAPIController.class).all()).withRel("users"));
+        return assembler.toModel(user);
     }
     // end::get-single-item[]
 
     @PutMapping("/users/{id}")
-    User replaceUser(@RequestBody User newUser, @PathVariable Long id) {
+    public User replaceUser(@RequestBody User newUser, @PathVariable Long id) {
 
         return repository.findById(id)
                 .map(User -> {
@@ -73,7 +80,8 @@ public class UserAPIController {
     }
 
     @DeleteMapping("/users/{id}")
-    void deleteUser(@PathVariable Long id) {
+    public void deleteUser(@PathVariable Long id) {
+
         repository.deleteById(id);
     }
 
