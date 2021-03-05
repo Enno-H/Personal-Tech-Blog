@@ -14,11 +14,13 @@ class LoadDatabase {
     private static final Logger log = LoggerFactory.getLogger(LoadDatabase.class);
 
     @Bean
-    CommandLineRunner initDatabase(UserRepository repository) {
+    CommandLineRunner initDatabase(UserRepository userRepository) {
 
         return args -> {
-            log.info("Preloading " + repository.save(new User("enno", "password", "enno@gmail.com", 0, "href1", "enno")));
-            log.info("Preloading " + repository.save(new User("root", "root", "root@gmail.com", 0, "href2", "root")));
+            userRepository.deleteAllInBatch();
+            userRepository.save(new User("enno", "password", "enno@gmail.com", 0, "href1", "enno"));
+            userRepository.save(new User("root", "root", "root@gmail.com", 0, "href2", "root"));
+            userRepository.findAll().forEach(user -> log.info("Preloaded " + user));
         };
     }
 }
