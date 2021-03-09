@@ -2,6 +2,7 @@ package com.enno.blog;
 
 import com.enno.blog.dao.UserRepository;
 import com.enno.blog.po.User;
+import com.enno.blog.util.MD5Utils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -18,8 +19,7 @@ class LoadDatabase {
 
         return args -> {
             userRepository.deleteAllInBatch();
-            userRepository.save(new User("enno", "password", "enno@gmail.com", 0, "href1", "enno"));
-            userRepository.save(new User("root", "root", "root@gmail.com", 0, "href2", "root"));
+            userRepository.save(new User("root", MD5Utils.code("root"), "root@gmail.com", 0, "href2", "root"));
             userRepository.findAll().forEach(user -> log.info("Preloaded " + user));
         };
     }
