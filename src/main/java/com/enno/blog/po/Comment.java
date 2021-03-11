@@ -1,5 +1,8 @@
 package com.enno.blog.po;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Date;
@@ -27,6 +30,7 @@ public class Comment {
     @ManyToOne
     private Blog blog;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "parentComment")
     private List<Comment> replyComments = new ArrayList<>();
 

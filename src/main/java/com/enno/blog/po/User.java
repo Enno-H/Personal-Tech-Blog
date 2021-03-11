@@ -1,5 +1,7 @@
 package com.enno.blog.po;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Date;
@@ -15,13 +17,9 @@ public class User {
 
     private String avatar;
 
-    private String nickname;
-
     private String username;
 
     private String password;
-
-    private String email;
 
     private Integer type;
 
@@ -31,19 +29,18 @@ public class User {
     @Temporal(TemporalType.TIMESTAMP)
     private Date updateTime;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "user")
     private List<Blog> blogs = new ArrayList<>();
 
     public User() {
     }
 
-    public User(String username, String password, String email, Integer type, String avatar, String nickname) {
+    public User(String username, String password, Integer type, String avatar) {
         this.username = username;
         this.password = password;
-        this.email = email;
         this.type = type;
         this.avatar = avatar;
-        this.nickname = nickname;
     }
 
     public Long getId() {
@@ -52,14 +49,6 @@ public class User {
 
     public void setId(Long id) {
         Id = id;
-    }
-
-    public String getNickname() {
-        return nickname;
-    }
-
-    public void setNickname(String nickname) {
-        this.nickname = nickname;
     }
 
     public String getUsername() {
@@ -76,14 +65,6 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public Integer getType() {
@@ -130,10 +111,8 @@ public class User {
     public String toString() {
         return "User{" +
                 "Id=" + Id +
-                ", nickname='" + nickname + '\'' +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
-                ", email='" + email + '\'' +
                 ", type=" + type +
                 ", createTime=" + createTime +
                 ", updateTime=" + updateTime +

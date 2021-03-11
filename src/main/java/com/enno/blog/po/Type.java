@@ -1,5 +1,8 @@
 package com.enno.blog.po;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.util.ArrayList;
@@ -16,6 +19,7 @@ public class Type {
     @NotBlank(message = "Type cannot be empty.")
     private String name;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "type")
     private List<Blog> blogs = new ArrayList<>();
 
