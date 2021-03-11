@@ -18,8 +18,8 @@ class LoadDatabase {
     CommandLineRunner initDatabase(UserRepository userRepository) {
 
         return args -> {
-            userRepository.deleteAllInBatch();
-            userRepository.save(new User("root", MD5Utils.code("root"), "root@gmail.com", 0, "href2", "root"));
+//            userRepository.deleteAllInBatch();
+//            userRepository.save(new User("root", MD5Utils.code("root"), 0, "href2"));
             userRepository.findAll().forEach(user -> log.info("Preloaded " + user));
         };
     }
