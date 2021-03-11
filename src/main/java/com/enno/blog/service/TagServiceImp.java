@@ -2,6 +2,7 @@ package com.enno.blog.service;
 
 import com.enno.blog.NotFoundException;
 import com.enno.blog.dao.TagRepository;
+import com.enno.blog.handler.TagNotFoundException;
 import com.enno.blog.po.Tag;
 import org.springframework.beans.BeanUtils;
 import org.springframework.data.domain.Page;
@@ -29,7 +30,8 @@ public class TagServiceImp implements TagService{
 
     @Override
     public Tag getTag(Long id) {
-        return tagRepository.getOne(id);
+        return tagRepository.findById(id)
+                .orElseThrow(() -> new TagNotFoundException(id));
     }
 
     @Override
