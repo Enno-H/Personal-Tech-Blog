@@ -1,6 +1,8 @@
 package com.enno.blog.po;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import io.swagger.annotations.ApiModelProperty;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -13,12 +15,14 @@ public class User {
 
     @Id
     @GeneratedValue
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private Long Id;
 
     private String avatar;
 
     private String username;
 
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
 
     private Integer type;
@@ -47,6 +51,7 @@ public class User {
         return Id;
     }
 
+    @JsonIgnore //In this case, id will be hidden in swagger's request example
     public void setId(Long id) {
         Id = id;
     }
