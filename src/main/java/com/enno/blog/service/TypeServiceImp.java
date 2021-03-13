@@ -67,6 +67,11 @@ public class TypeServiceImp implements TypeService{
     }
 
     @Override
+    public Boolean existsTypeByName(String name) {
+        return typeRepository.existsTypeByName(name);
+    }
+
+    @Override
     public void deleteType(Long id) {
         typeRepository.deleteById(id);
     }

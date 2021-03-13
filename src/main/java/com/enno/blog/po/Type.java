@@ -18,14 +18,19 @@ public class Type {
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private Long id;
 
+    @Column(unique=true)
     @NotBlank(message = "Type cannot be empty.")
     private String name;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "type")
+    @OneToMany(mappedBy = "type", cascade = CascadeType.REMOVE) // if removing a type, all blogs of this type will be removed.
     private List<Blog> blogs = new ArrayList<>();
 
     public Type() {
+    }
+
+    public Type(String name) {
+        this.name = name;
     }
 
     public Long getId() {

@@ -1,7 +1,6 @@
 package com.enno.blog.po;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
@@ -39,19 +38,22 @@ public class Blog {
 
     private boolean recommend;
 
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     @Temporal(TemporalType.TIMESTAMP)
     private Date createTime;
 
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     @Temporal(TemporalType.TIMESTAMP)
     private Date updateTime;
 
     @ManyToOne
     private Type type;
 
-    @ManyToMany(cascade = {CascadeType.PERSIST})
+    @ManyToMany(cascade = CascadeType.PERSIST)
     private List<Tag> tags = new ArrayList<>();
 
     @ManyToOne
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private User user;
 
     @JsonIgnore

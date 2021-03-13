@@ -17,6 +17,7 @@ public class Tag {
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private Long id;
 
+    @Column(unique=true)
     private String name;
 
     @JsonIgnore

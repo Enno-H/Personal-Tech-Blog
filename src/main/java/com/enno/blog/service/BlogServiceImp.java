@@ -8,7 +8,6 @@ import com.enno.blog.util.MarkdownUtils;
 import com.enno.blog.vo.BlogQuery;
 import com.enno.blog.util.MyBeanUtils;
 import org.springframework.beans.BeanUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -25,8 +24,11 @@ import java.util.*;
 public class BlogServiceImp implements BlogService {
 
 
-    @Autowired
-    private BlogRepository blogRepository;
+    private final BlogRepository blogRepository;
+
+    public BlogServiceImp(BlogRepository blogRepository) {
+        this.blogRepository = blogRepository;
+    }
 
 
     @Override
@@ -39,7 +41,7 @@ public class BlogServiceImp implements BlogService {
     public Blog getAndConvert(Long id) {
         Blog blog = blogRepository.getOne(id);
         if (blog == null) {
-            throw new NotFoundException("该博客不存在");
+            throw new NotFoundException("The blog does not exist.");
         }
         Blog b = new Blog();
         BeanUtils.copyProperties(blog,b);
@@ -48,6 +50,11 @@ public class BlogServiceImp implements BlogService {
 
         blogRepository.updateViews(id);
         return b;
+    }
+
+    @Override
+    public Page<Blog> listBlog(Pageable pageable) {
+        return blogRepository.findAll(pageable);
     }
 
     @Override
@@ -71,10 +78,6 @@ public class BlogServiceImp implements BlogService {
         },pageable);
     }
 
-    @Override
-    public Page<Blog> listBlog(Pageable pageable) {
-        return blogRepository.findAll(pageable);
-    }
 
     @Override
     public Page<Blog> listBlog(Long tagId, Pageable pageable) {
@@ -89,13 +92,11 @@ public class BlogServiceImp implements BlogService {
 
     @Override
     public Page<Blog> listBlog(String query, Pageable pageable) {
-        return blogRepository.findByQuery(query,pageable);
+        return blogRepository.findByQuery(query, pageable);
     }
 
     @Override
     public List<Blog> listRecommendBlogTop(Integer size) {
-//        Sort sort = new Sort(Sort.Direction.DESC,"updateTime");
-//        Pageable pageable = new PageRequest(0, size, sort);
         Pageable pageable = PageRequest.of(0, size, Sort.by("updateTime").descending());
         return blogRepository.findTop(pageable);
     }
@@ -119,12 +120,12 @@ public class BlogServiceImp implements BlogService {
     @Override
     public Blog saveBlog(Blog blog) {
         if (blog.getId() == null) {
-            //新增blog
+            //add a new blog
             blog.setCreateTime(new Date());
             blog.setUpdateTime(new Date());
             blog.setViews(0);
         } else {
-            //修改blog
+            //update the existing blog
             blog.setUpdateTime(new Date());
         }
         return blogRepository.save(blog);
@@ -135,7 +136,7 @@ public class BlogServiceImp implements BlogService {
     public Blog updateBlog(Long id, Blog blog) {
         Blog b = blogRepository.getOne(id);
         if (b == null) {
-            throw new NotFoundException("该博客不存在");
+            throw new NotFoundException("The blog does not exist.");
         }
         BeanUtils.copyProperties(blog,b, MyBeanUtils.getNullPropertyNames(blog));
         b.setUpdateTime(new Date());
