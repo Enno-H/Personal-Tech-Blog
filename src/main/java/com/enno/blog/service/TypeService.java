@@ -1,5 +1,6 @@
 package com.enno.blog.service;
 
+import com.enno.blog.po.Tag;
 import com.enno.blog.po.Type;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -25,6 +26,8 @@ public interface TypeService {
     Type getTypeByName(String name);
 
     void deleteType(Long id);
+
+    Type getOrElseCreateType(String typeName);
 
 
 

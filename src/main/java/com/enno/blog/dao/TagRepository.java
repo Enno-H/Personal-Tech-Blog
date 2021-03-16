@@ -13,4 +13,6 @@ public interface TagRepository extends JpaRepository<Tag, Long> {
 
     @Query("select t from Tag t")
     List<Tag> findTop(Pageable pageable);
+
+    Boolean existsTagByName(String name);
 }

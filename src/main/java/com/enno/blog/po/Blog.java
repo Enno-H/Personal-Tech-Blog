@@ -49,7 +49,7 @@ public class Blog {
     @ManyToOne
     private Type type;
 
-    @ManyToMany(cascade = CascadeType.PERSIST)
+    @ManyToMany
     private List<Tag> tags = new ArrayList<>();
 
     @ManyToOne
@@ -57,7 +57,7 @@ public class Blog {
     private User user;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "blog")
+    @OneToMany(mappedBy = "blog", cascade = CascadeType.PERSIST)
     private List<Comment> comments = new ArrayList<>();
 
     @Transient

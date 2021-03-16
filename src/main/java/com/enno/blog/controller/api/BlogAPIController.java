@@ -2,6 +2,7 @@ package com.enno.blog.controller.api;
 
 import com.enno.blog.assembler.BlogModelAssembler;
 import com.enno.blog.po.Blog;
+import com.enno.blog.po.Tag;
 import com.enno.blog.po.Type;
 import com.enno.blog.service.BlogService;
 import com.enno.blog.service.TagService;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
@@ -56,11 +58,13 @@ public class BlogAPIController {
     public ResponseEntity<EntityModel<Blog>> newBlog(@RequestBody Blog newBlog) {
 
         String inputTypeName = newBlog.getType().getName();
-        if(typeService.existsTypeByName(inputTypeName)){
-            newBlog.setType(typeService.getTypeByName(inputTypeName));
-        }else {
-            newBlog.setType(typeService.saveType(new Type(inputTypeName)));
-        }
+        newBlog.setType(typeService.getOrElseCreateType(inputTypeName));
+
+        List<String> tagNameList = newBlog.getTags().stream()
+                .map(tag -> tag.getName())
+                .collect(Collectors.toList());
+        newBlog.setTags(tagService.getOrElseCreateTagList(tagNameList));
+
 
         EntityModel<Blog> entityModel = assembler.toModel(blogService.saveBlog(newBlog));
 

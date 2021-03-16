@@ -75,4 +75,15 @@ public class TypeServiceImp implements TypeService{
     public void deleteType(Long id) {
         typeRepository.deleteById(id);
     }
+
+    public Type getOrElseCreateType(String typeName){
+        Type type;
+        if(this.existsTypeByName(typeName)){
+            type = this.getTypeByName(typeName);
+        }
+        else {
+            type = this.saveType(new Type(typeName));
+        }
+        return type;
+    }
 }
